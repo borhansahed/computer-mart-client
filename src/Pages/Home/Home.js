@@ -1,13 +1,14 @@
 import React from 'react';
-import Navber from './Navber';
+import Banner from './Banner';
+
 
 const Home = () => {
     return (
         <>
         
          
-        <div className='  lg:px-14'>
-            <Navber/>
+        <div className='  px-8'>
+            <Banner></Banner>
         </div>
         
         </>

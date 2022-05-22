@@ -5,9 +5,9 @@ module.exports = {
       {
         mytheme: {
         
-"primary": "#570DF8",
+   primary: "#EBA10F",
         
-"secondary": "#F000B8",
+  secondary: "#F000B8",
         
 "accent": "#37CDBE",
         
@@ -27,5 +27,5 @@ module.exports = {
     ],
   },
  
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require('tw-elements/dist/plugin')],
 }
