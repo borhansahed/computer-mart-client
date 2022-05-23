@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navber.css'
 
+
 const Navber = () => {
   const menu = <>
 
@@ -23,11 +24,11 @@ const Navber = () => {
             <label tabindex="0" class="btn btn-ghost lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </label>
-            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 w-52 ">
+            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 w-52  ">
               {menu}
             </ul>
           </div>
-          <Link to="/" class="btn btn-ghost normal-case ml-20 lg:ml-28 text-3xl  lg:text-5xl text-yellow-400">Computer Mart</Link>
+          <Link to="/" class="btn btn-ghost normal-case  lg:ml-28 text-3xl  lg:text-5xl text-yellow-400">Computer Mart</Link>
         </div>
         <div class="navbar-end hidden lg:flex">
           <ul class="menu menu-horizontal lg:pr-28 lg:text-xl ">
@@ -47,7 +48,7 @@ const Navber = () => {
             <span class="badge">New</span>
           </a>
         </li>
-        <li><a>Settings</a></li>
+        
         <li><a>Logout</a></li>
       </ul>
     </div>

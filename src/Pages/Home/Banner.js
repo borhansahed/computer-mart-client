@@ -1,5 +1,8 @@
 import React from 'react';
-
+import logo from '../../images/banner7.jpg'
+import logo1 from '../../images/banner2.jpg'
+import logo4 from '../../images/banner9.jpg'
+import './Banner.css'
 
 const Banner = () => {
     return (
@@ -35,39 +38,45 @@ const Banner = () => {
    
     <div class="carousel-item active relative float-left w-full">
       <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(19).webp"
-        class="block w-full"
+        src={logo1}
+        className="block w-full "
         alt="Motorbike Smoke"
       />
-      <div class="carousel-caption hidden md:block absolute text-center">
-        <h5 class="text-xl">First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+     <div class="carousel-caption hidden md:block absolute text-center mb-60 ">
+        <h5 class="text-7xl mb-5 ">Up to <span className='text-yellow-500 '>15%</span> Off All<br /> Our Products </h5>
+        <button   className='btn btn-outline btn-black text-2xl '>Shop Now</button>
+        <button className='btn btn-outline btn-warning text-2xl ml-12'>See it All</button>
+       
       </div>
     </div>
 
    
     <div class="carousel-item relative float-left w-full">
       <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(35).webp"
-        class="block w-full"
+        src={logo}
+        className="block w-full"
         alt="Mountaintop"
       />
-      <div class="carousel-caption hidden md:block absolute ">
-        <h5 class="text-5xl text-white mb-40">Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+      <div class="carousel-caption hidden md:block absolute text-center mb-40 ">
+        <h5 class="text-7xl mb-5 text-white  "><span className='text-yellow-500  text-8xl'>5% Off</span><br />For Everyday</h5>
+        <button   className='btn btn-outline btn-black text-2xl '>Shop Now</button>
+        <button className='btn btn-outline btn-warning text-2xl ml-12'>See it All</button>
+       
       </div>
     </div>
 
     
     <div class="carousel-item relative float-left w-full">
       <img
-        src=""
-        class="block w-full"
+        src={logo4}
+        className="block w-full "
         alt="Woman Reading a Book"
       />
-      <div class="carousel-caption hidden md:block absolute text-center">
-        <h5 class="text-xl text-white">Hello </h5>
-        <p>Some representative placeholder content for the third slide.</p>
+      <div class="carousel-caption hidden md:block absolute text-center mb-60 ">
+        <h5 class="text-7xl mb-4 text-white ">Beautiful <br /> <span className='text-yellow-300 ml-20'>moments</span> for you</h5>
+        <button   className='btn btn-outline btn-black text-2xl '>Shop Now</button>
+        <button className='btn btn-outline btn-warning text-2xl ml-12'>See it All</button>
+       
       </div>
     </div>
   </div>
