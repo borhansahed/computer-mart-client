@@ -45,7 +45,7 @@ const Banner = () => {
      <div class="carousel-caption hidden md:block absolute text-center mb-60 ">
         <h5 class="text-7xl mb-5 ">Up to <span className='text-yellow-500 '>15%</span> Off All<br /> Our Products </h5>
         <button   className='btn btn-outline btn-black text-2xl '>Shop Now</button>
-        <button className='btn btn-outline btn-warning text-2xl ml-12'>See it All</button>
+        <button className='btn btn-outline btn-warning text-2xl ml-12'>See It All</button>
        
       </div>
     </div>
@@ -60,7 +60,7 @@ const Banner = () => {
       <div class="carousel-caption hidden md:block absolute text-center mb-40 ">
         <h5 class="text-7xl mb-5 text-white  "><span className='text-yellow-500  text-8xl'>5% Off</span><br />For Everyday</h5>
         <button   className='btn btn-outline btn-black text-2xl '>Shop Now</button>
-        <button className='btn btn-outline btn-warning text-2xl ml-12'>See it All</button>
+        <button className='btn btn-outline btn-warning text-2xl ml-12'>See It All</button>
        
       </div>
     </div>
@@ -73,9 +73,9 @@ const Banner = () => {
         alt="Woman Reading a Book"
       />
       <div class="carousel-caption hidden md:block absolute text-center mb-60 ">
-        <h5 class="text-7xl mb-4 text-white ">Beautiful <br /> <span className='text-yellow-300 ml-20'>moments</span> for you</h5>
+        <h5 class="text-7xl mb-4  ">Beautiful <br /> <span className='text-yellow-300 '>moments</span> for you</h5>
         <button   className='btn btn-outline btn-black text-2xl '>Shop Now</button>
-        <button className='btn btn-outline btn-warning text-2xl ml-12'>See it All</button>
+        <button className='btn btn-outline btn-warning text-2xl ml-12'>See It All</button>
        
       </div>
     </div>

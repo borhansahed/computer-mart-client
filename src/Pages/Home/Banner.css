@@ -1,3 +1,9 @@
-img {
+.carousel-item img {
     height: 48rem;
+}
+@media screen and (max-width:668px) {
+    
+    .carousel-item img {
+        height: 100%;
+    }
 }

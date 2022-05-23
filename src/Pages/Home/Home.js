@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from './Banner';
+import FirstSection from './FirstSection';
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
          
         <div className='mt-4'>
             <Banner></Banner>
+            <FirstSection></FirstSection>
         </div>
         
         </>
