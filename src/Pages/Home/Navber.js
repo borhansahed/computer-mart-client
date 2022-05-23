@@ -10,6 +10,7 @@ const Navber = () => {
 
      <li><Link to='/'>Home</Link></li>
     <li ><Link to='/purchase'>Purchase</Link></li>
+    {user && <li ><Link to='/dashboard'>Dashboard</Link></li>}
     <li ><Link to='/blogs'>Blogs</Link></li>
     <li ><Link to='/My Protfolio'>My Portfolio</Link></li>
     {user || <li ><Link to='/login'>Login</Link></li>}
@@ -30,14 +31,14 @@ const Navber = () => {
               {menu}
             </ul>
           </div>
-          <Link to="/" class="btn btn-ghost normal-case  lg:ml-28 text-3xl  lg:text-5xl text-yellow-400">Computer Mart <small className='text-xs lg:text-xl'><RiComputerLine></RiComputerLine></small> </Link>
+          <Link to="/" class="btn btn-ghost normal-case  lg:ml-28 text-4xl  lg:text-6xl font-bold text-yellow-400">Computer Mart <small className='text-xs lg:text-xl'><RiComputerLine></RiComputerLine></small> </Link>
         </div>
         <div class="navbar-end hidden lg:flex">
           <ul class="menu menu-horizontal lg:pr-28 lg:text-xl ">
             {menu}
           </ul>
         </div>
-       {user &&  <div class="dropdown dropdown-end ml-40 lg:ml-0 lg:mr-20">
+       {user &&  <div class="dropdown dropdown-end ml-36 lg:ml-0 lg:mr-20">
       <label tabindex="0" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
           <img src="https://api.lorem.space/image/face?hash=33791" />

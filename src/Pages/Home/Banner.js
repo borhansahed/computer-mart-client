@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from '../../images/banner7.jpg'
 import logo1 from '../../images/banner2.jpg'
-import logo4 from '../../images/banner9.jpg'
+import logo4 from '../../images/banner02.jpg'
 import './Banner.css'
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -44,8 +45,8 @@ const Banner = () => {
       />
      <div class="carousel-caption hidden md:block absolute text-center mb-60 ">
         <h5 class="text-7xl mb-5 ">Up to <span className='text-yellow-500 '>15%</span> Off All<br /> Our Products </h5>
-        <button   className='btn btn-outline btn-black text-2xl '>Shop Now</button>
-        <button className='btn btn-outline btn-warning text-2xl ml-12'>See It All</button>
+        <Link to="/purchase"><button   className='btn btn-outline btn-black  lg:text-xl  text-xs '>Shop Now</button></Link>
+        <Link to="/purchase"><button className='btn btn-outline btn-warning text-xs lg:text-xl  ml-12'>See It All</button></Link>
        
       </div>
     </div>
@@ -59,8 +60,8 @@ const Banner = () => {
       />
       <div class="carousel-caption hidden md:block absolute text-center mb-40 ">
         <h5 class="text-7xl mb-5 text-white  "><span className='text-yellow-500  text-8xl'>5% Off</span><br />For Everyday</h5>
-        <button   className='btn btn-outline btn-black text-2xl '>Shop Now</button>
-        <button className='btn btn-outline btn-warning text-2xl ml-12'>See It All</button>
+        <Link to="/purchase"><button   className='btn btn-outline btn-black  lg:text-xl  text-xs '>Shop Now</button></Link>
+        <Link to="/purchase"><button className='btn btn-outline btn-warning text-xs lg:text-xl  ml-12'>See It All</button></Link>
        
       </div>
     </div>
@@ -72,10 +73,10 @@ const Banner = () => {
         className="block w-full "
         alt="Woman Reading a Book"
       />
-      <div class="carousel-caption hidden md:block absolute text-center mb-60 ">
-        <h5 class="text-7xl mb-4  ">Beautiful <br /> <span className='text-yellow-300 '>moments</span> for you</h5>
-        <button   className='btn btn-outline btn-black text-2xl '>Shop Now</button>
-        <button className='btn btn-outline btn-warning text-2xl ml-12'>See It All</button>
+      <div class="carousel-caption hidden md:block absolute text-center mb-60 mr-96 pr-60 ">
+        <h5 class="text-7xl mb-4 text-white ">Beautiful <br /> <span className='text-yellow-400 '>moments</span> for you</h5>
+        <Link to="/purchase"><button   className='btn btn-outline   lg:text-xl  text-xs '>Shop Now</button></Link>
+        <Link to="/purchase"><button className='btn btn-outline btn-warning text-xs lg:text-xl  ml-12'>See It All</button></Link>
        
       </div>
     </div>
