@@ -18,8 +18,9 @@ const Home = () => {
             <FirstSection></FirstSection>
             <HomeProducts></HomeProducts>
             <SecondSection></SecondSection>
-            <Review/>
+           
             <BusinessSummary/>
+             <Review/>
             <Footer></Footer>
         </div>
         

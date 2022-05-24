@@ -55,8 +55,8 @@ const Footer = () => {
                text-base lg:text-xl'>
                         <p><GoClock className='inline mr-2' />Mon - Sat 8.00 - 18.00</p>
                         <p><GoClock className='inline mr-2' />Sunday CLOSED</p>
-                        <p><HiOutlineMail className='inline mr-2' />sahed30@gmail.com</p>
-                        <p><HiOutlinePhone className='inline mr-2 ' />+844 123 456 78</p>
+                        <p><HiOutlineMail className='inline mr-2' />mdshahed1098@gmail.com</p>
+                        <p><HiOutlinePhone className='inline mr-2 ' />+880 174 639 1531</p>
                     </div>
 
                 </div>

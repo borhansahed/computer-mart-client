@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+  cursor: pointer;
   margin: 0;
   font-family: 'Teko', sans-serif;
   -webkit-font-smoothing: antialiased;

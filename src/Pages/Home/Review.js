@@ -16,7 +16,7 @@ const Review = () => {
 
 
 
-                    <div className='all-reviews-container lg:ml-16'>
+                    <div className='all-reviews-container lg:ml-16 '>
                         <div className='all-reviews '>
                             {
                                 reviews.reverse().slice(0, 3).map(review => <>
@@ -48,7 +48,7 @@ const Review = () => {
                         </div>
                     </div>
                     <div className='text-center'>
-                        <button className=' btn btn-outline text-base btn-sm btn-warning lg:btn lg:btn-outline  lg:text-xl mt-7 lg:mb-12'>Add Your Review</button>
+                        <button className=' btn btn-outline text-base btn-sm btn-warning lg:btn lg:btn-outline  lg:text-xl mt-7  lg:mb-12 mb-10'>Add Your Review</button>
                     </div>
 
                 </div>
