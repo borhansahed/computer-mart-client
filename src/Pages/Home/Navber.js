@@ -5,7 +5,7 @@ import './Navber.css'
 
 
 const Navber = () => {
-  const user = true;
+  const user = false;
   const menu = <>
 
      <li><Link to='/'>Home</Link></li>

@@ -1,8 +1,10 @@
 import React from 'react';
 import Banner from './Banner';
+import BusinessSummary from './BusinessSummary';
 import FirstSection from './FirstSection';
 import Footer from './Footer';
 import HomeProducts from './HomeProducts';
+import SecondSection from './SecondSection';
 
 
 const Home = () => {
@@ -14,6 +16,8 @@ const Home = () => {
             <Banner></Banner>
             <FirstSection></FirstSection>
             <HomeProducts></HomeProducts>
+            <SecondSection></SecondSection>
+            <BusinessSummary/>
             <Footer></Footer>
         </div>
         

@@ -1,5 +1,18 @@
-
-
-.footer-section h1{
-  
+.copy-rights{
+    font-size: 1.2rem;
+}
+@media screen  and (max-width:668px){
+   .footer-section {
+   text-align: center;
+   margin-top: 2rem;
+ 
+} 
+.copy-rights{
+    font-size: 1rem;
+}
+/* .social-media{
+    display: flex;
+    justify-content: center;
+    order: -2;
+} */
 }
