@@ -1,0 +1,15 @@
+.products-container img{
+    width: 43vh;
+    height: 18rem;
+}
+
+
+@media screen and (max-width:668px) {
+    .products-container img{
+    width: 30vh;
+    height: 10rem;
+}
+.products-card{
+    height:25rem;
+}
+}

@@ -44,7 +44,7 @@ const Banner = () => {
         alt="Motorbike Smoke"
       />
      <div class="carousel-caption hidden md:block absolute text-center mb-60 ">
-        <h5 class="text-7xl mb-5 ">Up to <span className='text-yellow-500 '>15%</span> Off All<br /> Our Products </h5>
+        <h5 class="text-7xl mb-5 ">Up to <span className='text-yellow-500  font-bold'>15%</span> Off All<br /> Our Products </h5>
         <Link to="/purchase"><button   className='btn btn-outline btn-black  lg:text-xl  text-xs '>Shop Now</button></Link>
         <Link to="/purchase"><button className='btn btn-outline btn-warning text-xs lg:text-xl  ml-12'>See It All</button></Link>
        
@@ -59,7 +59,7 @@ const Banner = () => {
         alt="Mountaintop"
       />
       <div class="carousel-caption hidden md:block absolute text-center mb-40 ">
-        <h5 class="text-7xl mb-5 text-white  "><span className='text-yellow-500  text-8xl'>5% Off</span><br />For Everyday</h5>
+        <h5 class="text-7xl mb-5 text-white  "><span className='text-yellow-500  text-8xl font-bold'>5% Off</span><br />For Everyday</h5>
         <Link to="/purchase"><button   className='btn btn-outline btn-black  lg:text-xl  text-xs '>Shop Now</button></Link>
         <Link to="/purchase"><button className='btn btn-outline btn-warning text-xs lg:text-xl  ml-12'>See It All</button></Link>
        
@@ -74,7 +74,7 @@ const Banner = () => {
         alt="Woman Reading a Book"
       />
       <div class="carousel-caption hidden md:block absolute text-center mb-60 mr-96 pr-60 ">
-        <h5 class="text-7xl mb-4 text-white ">Beautiful <br /> <span className='text-yellow-400 '>moments</span> for you</h5>
+        <h5 class="text-7xl mb-4 text-white ">Beautiful <br /> <span className='text-yellow-400 font-bold'>moments</span> for you</h5>
         <Link to="/purchase"><button   className='btn btn-outline   lg:text-xl  text-xs '>Shop Now</button></Link>
         <Link to="/purchase"><button className='btn btn-outline btn-warning text-xs lg:text-xl  ml-12'>See It All</button></Link>
        

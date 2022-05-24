@@ -1,0 +1,53 @@
+[
+    
+    {
+      "picture": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcHV0ZXIlMjBwYXJ0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500",
+      "name": "Keyboard",
+      "description": "The keyboard is an important part of a computer. This input device practically controls all the interactions with your machine. A good keyboard is needed to interact with your computer. It is also the most used peripheral of any computer. A Computer keyboard can give you proper comfort while typing.\r\n",
+      "MinimumOrderQuantity": 100,
+      "AvailableQuantity": 300,
+      "price": 299
+    },
+    {
+      "picture": "https://images.unsplash.com/photo-1602610411365-76e8c2a88e18?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbXB1dGVyJTIwcGFydHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500",
+      "name": "Joystick",
+      "description": "Gamepads are generally featured with a set of buttons controlled with the right thumb and direction controller or joypad usually designed with four-way digital cross handled with the left for having control on PC, PS4, XBOX games.\r\n",
+      "MinimumOrderQuantity": 40,
+      "AvailableQuantity": 200,
+      "price": 129
+    },
+    {
+      "picture": "https://images.unsplash.com/photo-1591238372408-8b98667c0460?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y29tcHV0ZXIlMjBwYXJ0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500",
+      "name": "Computer Case",
+      "description": "he journey of the modern casing has started around the year of 1990s with ordinary rectangular shapes, later it includes a wider range of variations in shape, form factor,s, and materials, such as brushed aluminum or tempered glass that are offered with expensive cases.\r\n",
+      "MinimumOrderQuantity": 70,
+      "AvailableQuantity": 149,
+      "price": 79
+    },
+    {
+      "picture": "https://images.unsplash.com/photo-1568209865332-a15790aed756?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29tcHV0ZXIlMjBwYXJ0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500",
+      "name": "Processor",
+      "description": "CPU Stands for the central processing unit. It is also called a central main processor, or simply just processor. It is essentially an electronic circuit that acts as the brain of the system. The CPU drives other components of the system to perform the commands of the user. Processors are available in computers, phones, TVs, and other smart electronic devices. The CPU is connected to the PC via Motherboard.\r\n",
+      "MinimumOrderQuantity": 30,
+      "AvailableQuantity": 100,
+      "price": 49
+    },
+    {
+      "picture": "https://images.unsplash.com/photo-1602837385569-08ac19ec83af?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=626",
+      "name": "Graphics Card",
+      "description": "Video Card or more commonly known as the graphics card is an expansion card that helps to get the clearest graphics output from your desktop PC. These expansion cards help in gaming, content writing and allow to get normal visual output for processors that do not provide graphical processing capability.\r\n",
+      "MinimumOrderQuantity": 60,
+      "AvailableQuantity": 300,
+      "price": 999
+    },
+    {
+      "picture": "https://images.unsplash.com/photo-1586816879360-004f5b0c51e5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29tcHV0ZXIlMjBwYXJ0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500",
+      "name": "Mouse",
+      "description": "Mouse is a very important and necessary invention that helps to control and command the computer. The mouse gives the user easy control over the computer and allows to drag and drop, scroll up and down and click whatever they want. The design of a mouse has changed greatly and has also been added with various features and specifications to improve the usability of the mouse.Mouse is a very important and necessary invention that helps to control and command the computer.\r\n",
+      "MinimumOrderQuantity": 50,
+      "AvailableQuantity": 150,
+      "price": 199
+    }
+   
+   
+  ]

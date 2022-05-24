@@ -4,6 +4,7 @@ import BusinessSummary from './BusinessSummary';
 import FirstSection from './FirstSection';
 import Footer from './Footer';
 import HomeProducts from './HomeProducts';
+import Review from './Review';
 import SecondSection from './SecondSection';
 
 
@@ -17,6 +18,7 @@ const Home = () => {
             <FirstSection></FirstSection>
             <HomeProducts></HomeProducts>
             <SecondSection></SecondSection>
+            <Review/>
             <BusinessSummary/>
             <Footer></Footer>
         </div>

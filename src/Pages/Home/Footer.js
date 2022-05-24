@@ -16,9 +16,9 @@ import { IoLogoFacebook } from "@react-icons/all-files/io/IoLogoFacebook";
 
 const Footer = () => {
     return (
-        <div style={{ backgroundImage: `url(${logo})` }} className=' mt-20 text-white   '>
+        <div style={{ backgroundImage: `url(${logo})` }} className='mt-6 lg:mt-12 text-white   '>
             <div>
-                <h1 className='text-3xl lg:text-4xl text-center  pt-20'>Join <span className='text-yellow-500'> To</span>  Newsletter</h1>
+                <h1 className='text-3xl lg:text-4xl text-center  pt-20'>Join <span className='text-yellow-500 font-bold'> To</span>  Newsletter</h1>
                 <p className='text-base lg:text-xl text-center mt-5 '>By adding these at the beginning of your emails you will sound more friendly and social.</p>
                 <div className='flex justify-center mt-8 lg:mt-14 '>
                     <input className='lg:w-2/6 lg:p-2 p-1 text-xl' type="email" name="email" placeholder='Your email address' id="" />
@@ -71,7 +71,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <p className='text-center  mt-7 copy-rights'>Copyright  2000-2022  by  <a href='#' className='text-yellow-400'>Computer Mart</a>  .  All Rights Reserved.</p>
+            <p className='text-center  mt-7 copy-rights'>Copyright  2000-2022  by  <a href='#' className='text-yellow-400 font-bold'>Computer Mart</a>  .  All Rights Reserved.</p>
         </div>
     );
 };
