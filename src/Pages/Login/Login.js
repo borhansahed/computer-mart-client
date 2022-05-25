@@ -48,7 +48,7 @@ const Login = () => {
         <div class="card-body">
 
           <div className='mb-4 lg:mb-8 font-bold'>
-            <h3 className=' text-3xl lg:text-5xl text-center text-yellow-400 '>LOGIN YOUR ACCOUNT</h3>
+            <h3 className=' text-3xl lg:text-4xl text-center text-yellow-400 '>LOGIN YOUR ACCOUNT</h3>
           </div>
 
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -68,7 +68,7 @@ const Login = () => {
             </div>
 
             <div class="form-control mt-6">
-              <input className='btn text-white btn-warning lg:text-lg' type="submit" />
+              <input className='btn text-white btn-warning text-base lg:text-xl' type="submit" />
             </div>
             <div className='text-center mt-3'>
 
@@ -84,7 +84,7 @@ const Login = () => {
           <div className="divider">OR</div>
                     <button 
                         onClick={() => signInWithGoogle()}
-                        className="btn btn-outline btn-warning btn-md text-1xl lg:btn lg:btn-outline lg:text-xl"
+                        className="btn btn-outline btn-warning btn-md text-base lg:btn lg:btn-outline lg:text-xl"
                     >Continue with Google</button>
                 
           

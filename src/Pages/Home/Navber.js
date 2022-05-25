@@ -54,6 +54,7 @@ const Navber = () => {
              {user && <li ><Link to='/dashboard'>Dashboard</Link></li>}
              <li ><Link to='/blogs'>Blogs</Link></li>
              <li ><Link to='/myprotfolio'>My Portfolio</Link></li>
+             {!user && <li ><Link to='/login'>Login</Link></li>}
             </ul>
           </div>
           <Link to="/" class="btn btn-ghost normal-case  lg:ml-28 text-4xl  lg:text-6xl font-bold text-yellow-400">Computer Mart <small className='text-xs lg:text-xl'><RiComputerLine></RiComputerLine></small> </Link>
@@ -63,11 +64,13 @@ const Navber = () => {
           <li><Link to='/'>Home</Link></li>
          <li ><Link to='/purchase'>Purchase</Link></li>
          {user && <li ><Link to='/dashboard'>Dashboard</Link></li>}
+        
           <li ><Link to='/blogs'>Blogs</Link></li>
-          <li ><Link to='/My Protfolio'>My Portfolio</Link></li>
+          <li ><Link to='/My Protfolio'>My Portfolio</Link></li> 
+          {!user && <li ><Link to='/login'>Login</Link></li>}
        </ul>
         </div>
-       {user ?  <div class="dropdown dropdown-end ml-28 lg:ml-0 lg:mr-48">
+       {user &&  <div class="dropdown dropdown-end ml-28 lg:ml-0 lg:mr-48">
       <label tabindex="0" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
           <img src="https://api.lorem.space/image/face?hash=33791" />
@@ -82,9 +85,9 @@ const Navber = () => {
           </a>
         </li>
         
-        <button className='btn btn-outline btn-warning btn-sm' onClick={handleLogout}>SignOut</button>
+        <button className='btn btn-outline w-20 ml-3 btn-warning btn-sm text-base' onClick={handleLogout}>SignOut</button>
       </ul>
-    </div> : <li className='ml-28 lg:ml-0 lg:mr-60  lg:text-xl link text-yellow-500'><Link to='/login'>Login</Link></li> }
+    </div> }
 
       </div>
  
