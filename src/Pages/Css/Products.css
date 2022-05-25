@@ -10,6 +10,17 @@
     height: 10rem;
 }
 .products-card{
+    
     height:25rem;
+}
+.products-cards{
+    
+    height:31rem;
+}
+.products-cards p{
+  line-height: 1rem;
+}
+.products-cards h2{
+  text-align: justify;
 }
 }

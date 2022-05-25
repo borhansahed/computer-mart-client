@@ -11,7 +11,7 @@ const Products = ({product}) => {
   <div class="card-body">
     <h2 class="card-title text-xl lg:text-3xl">{name}</h2>
     <p className='text-base lg:text-xl'>{description.slice(0,100)} ...<span className='text-yellow-500'>See More</span></p>
-    <p className=' text-2xl lg:text-4xl font-bold'>${price}</p>
+    <p className=' text-2xl lg:text-4xl font-bold '> <span className=''>$</span>{price}</p>
     <div class="card-actions justify-end">
       <Link class="btn btn-outline btn-warning btn-sm lg:text-xl lg:btn lg:btn-outline" to="/purchase">Purchase</Link>
     </div>
