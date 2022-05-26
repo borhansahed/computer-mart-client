@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../../Shared/Loading';
+import UserRow from './UserRow';
 
 const User = () => {
    
 
-    const {data: users , isLoading}  =useQuery('users' , () => fetch('http://localhost:5000/user').then(res=>res.json()))
+    const {data: users , isLoading , refetch}  =useQuery('users' , () => fetch('http://localhost:5000/user').then(res=>res.json()))
  
     if(isLoading){
         return <Loading></Loading>
     }
+
+    
     return (
         <div>
             <h3 className='text-2xl text-yellow-400'>All Users {users.length}</h3>
@@ -20,20 +23,24 @@ const User = () => {
     <thead>
       <tr>
         <th></th>
-        <th>Name</th>
+        
         <th>Email</th>
-        <th>Favorite Color</th>
+        <th>Admin</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
     {
 
-       users.map((u , index)=>  <tr>
-        <th>{index + 1}</th>
-        <td>{u.email}</td>
-        <td>Quality Control Specialist</td>
-        <td>Blue</td>
-      </tr>
+       users.map((user , index)=> <UserRow 
+        user={user}
+        key={user._id}
+       index={index}
+       refetch={refetch}
+       >
+
+
+       </UserRow> 
       ) 
     }
     

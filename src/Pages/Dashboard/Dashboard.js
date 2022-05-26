@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import UseAdmin from '../../Hooks/UseAdmin';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../Firebase-init'
 
 const Dashboard = () => {
+  const [user] = useAuthState(auth)
+
+  const [admin]=UseAdmin(user)
     return (
         <div className='lg:px-40 lg:mt-14'>
 
