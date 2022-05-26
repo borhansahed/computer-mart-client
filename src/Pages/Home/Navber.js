@@ -20,9 +20,9 @@ const Navber = () => {
  
  
 // if(loading){
-//   return <><div class="flex items-center justify-center">
-//   <div class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
-//     <span class="visually-hidden">Loading...</span>
+//   return <><div className="flex items-center justify-center">
+//   <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+//     <span className="visually-hidden">Loading...</span>
 //   </div>
 // </div></>
 // }
@@ -41,28 +41,28 @@ const Navber = () => {
 // console.log(menu)
   return (
     <>
-      <div class="navbar lg:px-20  mt-5">
-        <div class="navbar-start">
-          <div class="dropdown ">
-            <label tabindex="0" class="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      <div className="navbar lg:px-20  mt-5">
+        <div className="navbar-start">
+          <div className="dropdown ">
+            <label tabindex="0" className="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </label>
-            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 w-52 shadow bg-base-100 rounded-box ">
+            <ul tabindex="0" className="menu menu-compact dropdown-content mt-3 p-2 w-52 shadow bg-base-100 rounded-box ">
            
               <li><Link to='/'>Home</Link></li>
-              <li ><Link to='/purchase'>Purchase</Link></li>
+             
              {user && <li ><Link to='/dashboard'>Dashboard</Link></li>}
              <li ><Link to='/blogs'>Blogs</Link></li>
              <li ><Link to='/myprotfolio'>My Portfolio</Link></li>
              {!user && <li ><Link to='/login'>Login</Link></li>}
             </ul>
           </div>
-          <Link to="/" class="btn btn-ghost normal-case  lg:ml-28 text-4xl  lg:text-6xl font-bold text-yellow-400">Computer Mart <small className='text-xs lg:text-xl'><RiComputerLine></RiComputerLine></small> </Link>
+          <Link to="/" className="btn btn-ghost normal-case  lg:ml-28 text-4xl  lg:text-6xl font-bold text-yellow-400">Computer Mart <small className='text-xs lg:text-xl'><RiComputerLine></RiComputerLine></small> </Link>
         </div>
-        <div class="navbar-end hidden lg:flex">
-          <ul class="menu menu-horizontal lg:pr-28 lg:text-xl ">
+        <div className="navbar-end hidden lg:flex">
+          <ul className="menu menu-horizontal lg:pr-28 lg:text-xl ">
           <li><Link to='/'>Home</Link></li>
-         <li ><Link to='/purchase'>Purchase</Link></li>
+         
          {user && <li ><Link to='/dashboard'>Dashboard</Link></li>}
         
           <li ><Link to='/blogs'>Blogs</Link></li>
@@ -70,22 +70,22 @@ const Navber = () => {
           {!user && <li ><Link to='/login'>Login</Link></li>}
        </ul>
         </div>
-       {user &&  <div class="dropdown dropdown-end ml-28 lg:ml-0 lg:mr-48">
-      <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-        <div class="w-10 rounded-full">
-          <img src="https://api.lorem.space/image/face?hash=33791" />
+       {user &&  <div className="dropdown dropdown-end ml-28 lg:ml-0 lg:mr-48">
+      <label tabindex="0" className="btn btn-ghost btn-circle avatar">
+        <div className="w-10 rounded-full">
+          <img src={user.photoURL} />
           
         </div>
       </label>
-      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabindex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
         <li>
-          <a class="justify-between">
-            Profile
-            <span class="badge">New</span>
+          <a className="justify-between text-base lg:text-xl">
+           {user.email}
+            
           </a>
         </li>
         
-        <button className='btn btn-outline w-20 ml-3 btn-warning btn-sm text-base' onClick={handleLogout}>SignOut</button>
+        <button className='btn btn-outline w-14 lg:w-20 ml-2 lg:ml-3 btn-warning  btn-xs lg:btn-sm  text-base' onClick={handleLogout}>SignOut</button>
       </ul>
     </div> }
 

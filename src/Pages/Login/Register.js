@@ -21,9 +21,9 @@ const Register = () => {
         navigate('/home')
       }
       if (loading || gLoading ) {
-        return <><div class="flex items-center justify-center">
-        <div class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
-          <span class="visually-hidden">Loading...</span>
+        return <><div className="flex items-center justify-center">
+        <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
       </div></>
     }
@@ -41,11 +41,11 @@ const Register = () => {
     return (
         <>
            
-            <div class=" flex w-72  lg:w-1/4 mx-auto mt-10 lg:mt-20">
+            <div className=" flex w-72  lg:w-1/4 mx-auto mt-10 lg:mt-20">
 
  
 
-                <div class="card-body">
+                <div className="card-body">
 
                <div className='mb-4 lg:mb-9 font-bold'>
                 <h3 className=' text-3xl lg:text-4xl text-center text-yellow-400 '>REGISTER YOUR ACCOUNT</h3>
@@ -53,33 +53,33 @@ const Register = () => {
 
                    <form   onSubmit={handleSubmit(onSubmit)}>
 
-                   <div class="form-control">
-                        <label class="label">
-                            <span class="label-text text-base lg:text-xl">First Name</span>
+                   <div className="form-control">
+                        <label className="label">
+                            <span className="label-text text-base lg:text-xl">First Name</span>
                         </label>
                          <input className="input input-bordered" type="text" placeholder="First name" {...register("First name", { required: true, maxLength: 80 })} />
                     </div>
-                    <div class="form-control">
-                        <label class="label">
-                            <span class="label-text text-base lg:text-xl">Email</span>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text text-base lg:text-xl">Email</span>
                         </label>
                         <input className='input input-bordered' type="email" placeholder="Email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
                         
                     </div>
-                    <div class="form-control">
-                        <label class="label">
-                            <span class="label-text text-base lg:text-xl">Password</span>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text text-base lg:text-xl">Password</span>
                         </label>
                          <input className="input input-bordered" type="text" placeholder="Password" {...register("password", { required: true, minLength: 6, maxLength: 12})} />
                     </div>
-                    <div class="form-control mb-4">
-                        <label class="label">
-                            <span class="label-text text-base lg:text-xl">Mobile Number</span>
+                    <div className="form-control mb-4">
+                        <label className="label">
+                            <span className="label-text text-base lg:text-xl">Mobile Number</span>
                         </label>
                         <input  className="input input-bordered" type="tel" placeholder="Mobile number" {...register("Mobile number", { required: true, minLength: 6, maxLength: 12 })} />
                     </div>
                   
-                    <div class="form-control mt-6">
+                    <div className="form-control mt-6">
                     <input className='btn text-white btn-warning text-base lg:text-lg' type="submit" />
                     </div>
                     <div className='text-center mt-3'>

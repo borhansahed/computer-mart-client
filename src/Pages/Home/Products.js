@@ -1,19 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import '../Css/Products.css'
 
 const Products = ({product}) => {
-    const {name , price , description , picture} =product;
+
+    const {name , price , description , picture , _id} =product;
+
+    const ProductDetail = () => {
+      const path = `/inventory/${_id}`;
+      Navigate(path);
+    }
     return (
         <div className='products-container'>
-            <div class="card w-72 products-card lg:w-96 bg-base-100 shadow-xl">
+            <div className="card w-72 products-card lg:w-96 bg-base-100 shadow-xl">
   <figure><img src={picture} alt="Shoes" /></figure>
-  <div class="card-body">
-    <h2 class="card-title text-xl lg:text-3xl">{name}</h2>
-    <p className='text-base lg:text-xl'>{description.slice(0,100)} ...<span className='text-yellow-500'>See More</span></p>
+  <div className="card-body">
+    <h2 className="card-title text-xl lg:text-3xl">{name}</h2>
+    <p className='text-base lg:text-xl'>{description?.slice(0,100)} ...<span className='text-yellow-500'>See More</span></p>
     <p className=' text-2xl lg:text-4xl font-bold '> <span className=''>$</span>{price}</p>
-    <div class="card-actions justify-end">
-      <Link class="btn btn-outline btn-warning btn-sm lg:text-xl lg:btn lg:btn-outline" to="/purchase">Purchase</Link>
+    <div className="card-actions justify-end">
+      <Link className="btn btn-outline btn-warning btn-sm lg:text-xl lg:btn lg:btn-outline" to={`/purchase/${_id}`}>Purchase</Link>
     </div>
   </div>
 </div>

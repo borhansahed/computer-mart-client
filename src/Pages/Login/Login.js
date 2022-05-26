@@ -33,19 +33,19 @@ const Login = () => {
   }
 
   if(loading || gLoading){
-    return <><div class="flex items-center justify-center">
-    <div class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
-      <span class="visually-hidden">Loading...</span>
+    return <><div className="flex items-center justify-center">
+    <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+      <span className="visually-hidden">Loading...</span>
     </div>
   </div></>
   }
   return (
     <>
-      <div class=" flex h-screen w-72  lg:w-1/4 mx-auto mt-12 lg:mt-20">
+      <div className=" flex h-screen w-72  lg:w-1/4 mx-auto mt-12 lg:mt-20">
 
 
 
-        <div class="card-body">
+        <div className="card-body">
 
           <div className='mb-4 lg:mb-8 font-bold'>
             <h3 className=' text-3xl lg:text-4xl text-center text-yellow-400 '>LOGIN YOUR ACCOUNT</h3>
@@ -53,21 +53,21 @@ const Login = () => {
 
           <form onSubmit={handleSubmit(onSubmit)}>
 
-            <div class="form-control">
-              <label class="label">
-                <span class="label-text  text-base lg:text-xl">Email</span>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text  text-base lg:text-xl">Email</span>
               </label>
               <input className='input input-bordered' type="email" placeholder="Email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
 
             </div>
-            <div class="form-control">
-              <label class="label">
-                <span class="label-text text-base lg:text-xl">Password</span>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-base lg:text-xl">Password</span>
               </label>
               <input className="input input-bordered" type="text" placeholder="Password" {...register("password", { required: true, minLength: 6, maxLength: 12 })} />
             </div>
 
-            <div class="form-control mt-6">
+            <div className="form-control mt-6">
               <input className='btn text-white btn-warning text-base lg:text-xl' type="submit" />
             </div>
             <div className='text-center mt-3'>

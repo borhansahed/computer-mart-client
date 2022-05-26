@@ -32,8 +32,8 @@ const Review = () => {
                                             <p className=' mx-auto text-xl '>"" {review.review.slice(0, 165)}...<span className='text-yellow-500 text-base'>See More</span></p>
 
                                            </div>
-                                            <div class="avatar flex justify-center mt-5">
-                                                <div class="w-16 rounded-full ">
+                                            <div className="avatar flex justify-center mt-5">
+                                                <div className="w-16 rounded-full ">
                                                     <img src={review.picture} />
                                                 </div>
                                                 

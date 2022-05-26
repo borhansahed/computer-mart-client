@@ -1,12 +1,12 @@
 .products-container img{
-    width: 43vh;
+    width: 48vh;
     height: 18rem;
 }
 
 
 @media screen and (max-width:668px) {
     .products-container img{
-    width: 30vh;
+    width: 36vh;
     height: 10rem;
 }
 .products-card{
@@ -15,7 +15,7 @@
 }
 .products-cards{
     
-    height:31rem;
+    height:35rem;
 }
 .products-cards p{
   line-height: 1rem;
