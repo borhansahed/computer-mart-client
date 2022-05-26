@@ -16,6 +16,7 @@ const Navber = () => {
 
  const handleLogout = () =>{
   signOut(auth);
+  localStorage.removeItem('accessToken');
 }
  
  

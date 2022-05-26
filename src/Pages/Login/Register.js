@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase-init';
 import useToken from '../../Hooks/UseToken';
+import Loading from '../../Shared/Loading';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -28,11 +29,7 @@ const Register = () => {
       
       }
       if (loading || gLoading ) {
-        return <><div className="flex items-center justify-center">
-        <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
-      </div></>
+        return <Loading></Loading>
     }
 
     
