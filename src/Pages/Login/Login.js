@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Register from './Register';
 import auth from '../../Firebase-init';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import useToken from '../../Hooks/UseToken';
 
 
 
@@ -21,16 +22,24 @@ const Login = () => {
     error,
 ] = useSignInWithEmailAndPassword(auth);
 
+const [token] = useToken(user || gUser);
+
+useEffect(()=>{
+if(token){
+   
+      navigate(from , {replace : true})
+    
+  }
+
+
+},[token , from , navigate])
+
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => {
    
     signInWithEmailAndPassword(data.email, data.password);
   }
-  if(user || gUser){
-   
-      navigate(from , {replace : true})
-    
-  }
+  
 
   if(loading || gLoading){
     return <><div className="flex items-center justify-center">

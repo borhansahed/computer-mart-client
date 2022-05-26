@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-fi
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase-init';
+import useToken from '../../Hooks/UseToken';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -17,8 +18,14 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
+    const [token] = useToken(user || gUser);
+
+    if(token){
+        navigate('/home')  ;
+    }
+
       if(user || gUser){
-        navigate('/home')
+      
       }
       if (loading || gLoading ) {
         return <><div className="flex items-center justify-center">
@@ -34,7 +41,7 @@ const Register = () => {
 
     const onSubmit = async data =>{
         await createUserWithEmailAndPassword(data.email, data.password);
-        
+       
       
     } 
    

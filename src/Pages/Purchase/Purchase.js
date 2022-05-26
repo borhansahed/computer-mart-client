@@ -84,8 +84,8 @@ const Purchase = () => {
                             <h2 className='text-base lg:text-xl '>{description}</h2>
 
                             <p className=' text-base lg:text-2xl mb-0 '> <span className=''>AvailableQuantity : </span>{AvailableQuantity}</p>
-                            <p className=' text-base lg:text-2xl  '> <span className=''>MinimumOrderQuantity : </span>{MinimumOrderQuantity}</p>
-                            <p className=' text-2xl lg:text-4xl font-bold  mt-2 lg:mt-0'> <span className=''>$</span>{price}</p>
+                            <p className=' text-base lg:text-2xl mb-0 mt-0'> <span className=''>MinimumOrderQuantity : </span>{MinimumOrderQuantity}</p>
+                            <p className=' text-2xl lg:text-4xl font-bold  mt-0 mt-2 lg:mt-0'> <span className=''>$</span>{price}</p>
 
                         </div>
                     </div>

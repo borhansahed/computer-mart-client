@@ -11,7 +11,7 @@ import { signOut } from 'firebase/auth';
 
 const Navber = () => {
  const [user , loading] =useAuthState(auth)
- console.log(user);
+
  
 
  const handleLogout = () =>{
