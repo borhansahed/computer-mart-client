@@ -51,7 +51,7 @@ const Review = () => {
                         </div>
                     </div>
                     <div className='text-center'>
-                       <Link to="/addreview"><button className=' btn btn-outline text-base btn-sm btn-warning lg:btn lg:btn-outline  lg:text-xl mt-7  lg:mb-12 mb-10'>Add Your Review</button></Link> 
+                       <Link to="dashboard/addreview"><button className=' btn btn-outline text-base btn-sm btn-warning lg:btn lg:btn-outline  lg:text-xl mt-7  lg:mb-12 mb-10'>Add Your Review</button></Link> 
                     </div>
 
                 </div>

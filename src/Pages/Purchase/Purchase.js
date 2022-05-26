@@ -30,10 +30,10 @@ const Purchase = () => {
         event.preventDefault();
         const quantity = event.target.quantity.value;
         if(MinimumOrderQuantity > quantity){
-            return toast('Pls select your quantity minimunOrderQuantity or above');
+            return toast.error('Pls select your quantity minimunOrderQuantity or above');
         }
         if(AvailableQuantity < quantity){
-            return toast('Pls select your quantity below AvailableQuantity');
+            return toast.error("Pls select your quantity below AvailableQuantity");
         }
        const booking ={
 
@@ -47,7 +47,7 @@ const Purchase = () => {
            
         
        }
-       fetch('http://localhost:5000/booking' , {
+       fetch('https://cryptic-retreat-01074.herokuapp.com/booking' , {
            method: 'POST',
            headers:{
                'content-type':'application/json'
@@ -56,7 +56,7 @@ const Purchase = () => {
        })
        .then(res => res.json())
        .then(data=>{
-            toast('thanks for order')
+            toast.success('thanks for order')
             
        })
        
@@ -77,7 +77,7 @@ const Purchase = () => {
             <div className=' flex flex-wrap justify-center gap-x-32 lg:gap-y-16 gap-y-10 lg:mt-12 mt-8 mb-16'>
 
                 <div className='products-container flex flex-col lg:flex-row lg:gap-x-20 gap-y-7'>
-                    <div className="card w-72 products-cards lg:w-96 bg-base-100">
+                    <div className="card w-72  products-cards lg:w-96 bg-base-100">
                         <figure><img src={picture} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title text-xl lg:text-3xl">{name}</h2>
@@ -132,7 +132,7 @@ const Purchase = () => {
                             </div>
 
                             <div className="form-control mt-6">
-                                <input  className="btn btn-outline btn-warning btn-sm lg:text-xl lg:btn lg:btn-outline w-full mt-2 lg:mt-0" type="submit" value='Order' />
+                                <input  className="btn btn-outline btn-warning btn-sm lg:text-xl lg:btn lg:btn-outline w-full mt-2 lg:mt-0" type="submit" value='ORDER' />
                             </div>
 
                         </form>

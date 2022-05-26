@@ -15,10 +15,10 @@
 }
 .products-cards{
     
-    height:28.5rem;
+    height:34rem;
 }
 .products-cards p{
-  margin-top: 2px;
+  line-height: 1rem;
 }
 .products-cards h2{
   text-align: justify;
