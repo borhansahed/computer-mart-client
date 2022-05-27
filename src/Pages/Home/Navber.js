@@ -4,15 +4,19 @@ import { RiComputerLine} from "@react-icons/all-files/ri/RiComputerLine";
 import './Navber.css'
 
 import auth from '../../Firebase-init';
+
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
+import Loading from '../../Shared/Loading';
 
 
 
 const Navber = () => {
  const [user , loading] =useAuthState(auth)
-
  
+ if(loading){
+   return <Loading></Loading>
+ }
 
  const handleLogout = () =>{
   signOut(auth);
@@ -67,7 +71,7 @@ const Navber = () => {
          {user && <li ><Link to='/dashboard'>Dashboard</Link></li>}
         
           <li ><Link to='/blogs'>Blogs</Link></li>
-          <li ><Link to='/My Protfolio'>My Portfolio</Link></li> 
+          <li ><Link to='/myprotfolio'>My Portfolio</Link></li> 
           {!user && <li ><Link to='/login'>Login</Link></li>}
        </ul>
         </div>

@@ -9,12 +9,13 @@ import Footer from '../Home/Footer';
 import BookingModal from './BookingModal';
 import BookingProduct from './BookingProduct';
 import {  toast } from 'react-toastify';
+import Loading from '../../Shared/Loading';
 
 
 
 const Purchase = () => {
     const navigate = useNavigate();
-    const [user] = useAuthState(auth)
+    const [user , loading] = useAuthState(auth)
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { id } = useParams();
     const [product, setProduct] = useState([]);
@@ -24,6 +25,11 @@ const Purchase = () => {
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [product])
+
+    if(loading){
+
+        return <Loading></Loading>
+    }
     
     const {name , price , picture , description , AvailableQuantity , MinimumOrderQuantity , _id }= product;
     const handleOrder = event =>{

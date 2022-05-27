@@ -5,6 +5,7 @@ import Register from './Register';
 import auth from '../../Firebase-init';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import useToken from '../../Hooks/UseToken';
+import Loading from '../../Shared/Loading';
 
 
 
@@ -42,11 +43,7 @@ if(token){
   
 
   if(loading || gLoading){
-    return <><div className="flex items-center justify-center">
-    <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
-      <span className="visually-hidden">Loading...</span>
-    </div>
-  </div></>
+    return <Loading></Loading>
   }
   return (
     <>

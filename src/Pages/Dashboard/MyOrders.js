@@ -61,8 +61,9 @@ const MyOrders = () => {
         <td>{order.quantity}</td>
         <td>$ {order.price ?   order.price :  10062}</td>
        <td>{(order.price && !order.paid ) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-outline btn-sm btn-warning text-base'>Pay</button></Link> }
-       { (order.price && order.paid ) && <span className='text-yellow-500 text-base'>Paid</span>      }
-       <button className='btn btn-outline btn-sm btn-error text-base ml-3'>Cancel</button></td>
+       { (order.price && order.paid ) && <button  className=' text-base px-5 btn-sm ml-4 btn btn-outline btn-success'>Paid</button>      }
+      {!order.paid && <button className='btn btn-outline btn-sm btn-error text-base ml-3'>Cancel</button>}
+       </td>
       
       </tr>
       
