@@ -40,6 +40,7 @@ const Purchase = () => {
           productId: _id ,
           product:name,
           price: quantity * price,
+          picture,
           quantity ,
           customer:user.email,
           customerName:user.displayName,
@@ -132,7 +133,7 @@ const Purchase = () => {
                             </div>
 
                             <div className="form-control mt-6">
-                                <input  className="btn btn-outline btn-warning btn-sm lg:text-xl lg:btn lg:btn-outline w-full mt-2 lg:mt-0" type="submit" value='ORDER' />
+                                <input  className=" text-white lg:text-white  btn  btn-warning btn-sm lg:btn lg:btn-warning  lg:text-xl   w-full mt-2 lg:mt-0" type="submit" value='ORDER' />
                             </div>
 
                         </form>

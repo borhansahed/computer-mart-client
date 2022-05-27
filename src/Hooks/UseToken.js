@@ -6,8 +6,9 @@ const useToken = user =>{
 
     useEffect(()=>{
          const email = user?.user?.email;
+         const password = user?.user?.password;
          
-         const currentUser = {email: email};
+         const currentUser = {email: email , password : password};
           if(email){
               fetch(`https://cryptic-retreat-01074.herokuapp.com/user/${email}`,{
                   method:'PUT',

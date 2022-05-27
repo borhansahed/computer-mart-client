@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import auth from '../../Firebase-init';
+import Loading from '../../Shared/Loading';
 
 const MyOrders = () => {
     const [orders , setOrders] = useState([]);
-    const[user] = useAuthState(auth);
-     
+    const[user , loading] = useAuthState(auth);
+
+    
+
     useEffect(()=>{
     if(user){
         fetch(`https://cryptic-retreat-01074.herokuapp.com/booking?customer=${user.email}` , {
@@ -18,6 +22,13 @@ const MyOrders = () => {
         .then(data => setOrders(data));
     }
     },[user])
+
+    
+    if(loading){
+      return <Loading></Loading>
+    };
+
+    
     return (
         <div>
             <h3 className='text-2xl mt-4 text-yellow-500 mb-3'> Your Orders</h3>
@@ -49,7 +60,8 @@ const MyOrders = () => {
         <td>{order.product}</td>
         <td>{order.quantity}</td>
         <td>$ {order.price ?   order.price :  10062}</td>
-       <td><button className='btn btn-outline btn-sm btn-warning text-base'>Pay</button>
+       <td>{(order.price && !order.paid ) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-outline btn-sm btn-warning text-base'>Pay</button></Link> }
+       { (order.price && order.paid ) && <span className='text-yellow-500 text-base'>Paid</span>      }
        <button className='btn btn-outline btn-sm btn-error text-base ml-3'>Cancel</button></td>
       
       </tr>

@@ -20,7 +20,7 @@ const User = () => {
     
     return (
         <div>
-            <h3 className='text-2xl text-yellow-400'>All Users {users.length}</h3>
+            <h3 className='text-3xl mt-3 mb-3 text-yellow-500'>All Users</h3>
 
             <div class="overflow-x-auto">
   <table class="table w-full">
@@ -29,7 +29,7 @@ const User = () => {
       <tr className='text-xl'>
         <th></th>
         
-        <th className='text-xl text-yellow-500'>Email</th>
+        <th className='text-xl text-yellow-500'>User</th>
         <th className='text-xl text-yellow-500'>Make Admin</th>
         <th className='text-xl text-yellow-500'> Remove User </th>
       </tr>
