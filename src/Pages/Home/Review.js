@@ -38,9 +38,7 @@ const Review = () => {
                                                 </div>
                                                 
                                             </div>
-                                    <h4 className='text-center font-medium text-xl lg:text-2xl mt-3 text-yellow-500'>{review.name}</h4>
-
-                                            <h4 className='mt-2 mb-3 text-center text-xl text-yellow-500'> {review.ratings} </h4>
+                                   <h4 className='mt-2 mb-3 text-center text-xl text-yellow-500'> {review.ratings} </h4>
                                         </div>
                                       
                                     </div>

@@ -8,14 +8,19 @@ const MyOrders = () => {
      
     useEffect(()=>{
     if(user){
-        fetch(`https://cryptic-retreat-01074.herokuapp.com/booking?customer=${user.email}`)
+        fetch(`https://cryptic-retreat-01074.herokuapp.com/booking?customer=${user.email}` , {
+          method:'GET' ,
+          headers :{
+            'authorization' : `Bearer ${localStorage.getItem('accessToken')}`
+          }
+        })
         .then(res=>res.json())
         .then(data => setOrders(data));
     }
     },[user])
     return (
         <div>
-            <h3>order {orders.length}  </h3>
+            <h3 className='text-2xl mt-4 text-yellow-500 mb-3'> Your Orders</h3>
             <div class="overflow-x-auto">
   <table class="table w-full">
    

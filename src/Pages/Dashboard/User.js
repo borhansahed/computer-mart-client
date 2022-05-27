@@ -6,7 +6,12 @@ import UserRow from './UserRow';
 const User = () => {
    
 
-    const {data: users , isLoading , refetch}  =useQuery('users' , () => fetch('https://cryptic-retreat-01074.herokuapp.com/user').then(res=>res.json()))
+    const {data: users , isLoading , refetch}  =useQuery('users' , () => fetch('https://cryptic-retreat-01074.herokuapp.com/user' , {
+      method: 'GET',
+      headers:{
+          authorization: `Bearer ${localStorage.getItem('accessToken')}`
+      }
+    }).then(res=>res.json()))
  
     if(isLoading){
         return <Loading></Loading>
@@ -21,12 +26,12 @@ const User = () => {
   <table class="table w-full">
    
     <thead>
-      <tr>
+      <tr className='text-xl'>
         <th></th>
         
-        <th>Email</th>
-        <th>Admin</th>
-        <th></th>
+        <th className='text-xl text-yellow-500'>Email</th>
+        <th className='text-xl text-yellow-500'>Make Admin</th>
+        <th className='text-xl text-yellow-500'> Remove User </th>
       </tr>
     </thead>
     <tbody>

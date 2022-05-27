@@ -8,7 +8,7 @@ const UserRow = ({user , index , refetch}) => {
         fetch(`https://cryptic-retreat-01074.herokuapp.com/user/admin/${email}`,{
             method:'PUT',
             headers:{
-                'content-type': 'application/json'
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
 
             }
 
@@ -37,8 +37,8 @@ const UserRow = ({user , index , refetch}) => {
            
            <th>{index + 1}</th>
            <td>{email}</td>
-           <td>{role !== 'admin' &&<button onClick={handleAdmin} className='btn btn-outline  btn-sm'>Make Admin</button>}</td>
-           <td><button className='btn btn-outline  btn-sm'>Remove user</button></td>
+           <td>{role !== 'admin' && <button onClick={handleAdmin} className='btn btn-outline btn-warning text-1xl btn-sm'>Make Admin</button>}</td>
+           <td><button className='btn btn-outline  btn-sm btn-error'>Remove user</button></td>
            
          </tr>
        
