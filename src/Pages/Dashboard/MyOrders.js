@@ -31,20 +31,20 @@ const MyOrders = () => {
     
     return (
         <div>
-            <h3 className='text-2xl mt-4 text-yellow-500 mb-3'> Your Orders</h3>
+            <h3 className='text-3xl mt-4 text-yellow-500 mb-3'> Your Orders</h3>
             <div class="overflow-x-auto">
   <table class="table w-full">
    
     <thead>
       <tr className='text-yellow-500'>
         <th></th>
-        <th className='text-xl'>Name</th>
-        <th className='text-xl'>Email</th>
-        <th className='text-xl'>Product</th>
-        <th className='text-xl'>Quantity</th>
-        <th className='text-xl'> $ Price</th>
+        <th className='text-2xl font-medium'>Name</th>
+        <th className='text-2xl font-medium'>Email</th>
+        <th className='text-2xl font-medium'>Product</th>
+        <th className='text-2xl font-medium'>Quantity</th>
+        <th className='text-2xl font-medium'> $ Price</th>
        
-        <th className='text-xl'>Payment/DeliveryStatus</th>
+        <th className='text-2xl font-medium'>Payment/ShippingStatus</th>
        
       </tr>
     </thead>

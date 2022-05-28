@@ -30,7 +30,7 @@ const ManageAllOrders = () => {
         <th  className='text-xl  text-yellow-500' >Quantity</th>
         <th  className='text-xl  text-yellow-500' >Price</th>
         <th  className='text-xl  text-yellow-500  '>Phone</th>
-        <th></th>
+        <th className='text-xl  text-yellow-500'> Payment/ShippingStatus </th>
       </tr>
     </thead>
     <tbody>

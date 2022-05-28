@@ -7,7 +7,7 @@ const MyProfile = () => {
     const [user] = useAuthState(auth);
     return (
         <div>
-            <h3 className=' text-2xl'>{user.displayName ? user.displayName : 'Sorry'}</h3>
+            <h3 className=' text-2xl'>{user.displayName ? user.displayName : ''}</h3>
             <h3 className=' text-2xl'>{user.email ? user.email : 'Sorry'}</h3>
         </div>
     );

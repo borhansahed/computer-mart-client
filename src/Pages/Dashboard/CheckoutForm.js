@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
-import { async } from '@firebase/util';
-
-
 import Loading from '../../Shared/Loading';
 
-const CheckoutForm = ({ booking , isLoading }) => {
+const CheckoutForm = ({ booking , isLoading , refetch }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [cardError, setCardError] = useState('');
@@ -104,15 +101,21 @@ const CheckoutForm = ({ booking , isLoading }) => {
       })
       .then(res=>res.json())
       .then(data=>{
-       if(isLoading){
-         return <Loading></Loading>
-       }
+       refetch();
 
       })
     }
+    if(processing){
+      return <Loading></Loading>
+    }
+  
 
   
   }
+
+    if(isLoading){
+      return <Loading></Loading>
+    }
  
   return (
     <>
@@ -133,9 +136,11 @@ const CheckoutForm = ({ booking , isLoading }) => {
             },
           }}
         />
-        <button className='btn  btn-sm btn-warning text-base mt-4 font-medium text-white' type="submit" disabled={!stripe || !clientSecret}>
+       { !booking.paid ? <button className='btn  btn-sm btn-warning text-base mt-4 font-medium text-white' type="submit" disabled={!stripe || !clientSecret}>
           Pay
-        </button>
+        </button> : <button className='btn  btn-sm btn-success text-base mt-4 font-medium text-white' >
+          Paid
+        </button>}
       </form>
 
       {

@@ -3,11 +3,18 @@ import { Link, Outlet } from 'react-router-dom';
 import UseAdmin from '../../Hooks/UseAdmin';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase-init'
+import Loading from '../../Shared/Loading';
 
 const Dashboard = () => {
-  const [user] = useAuthState(auth)
+  const [user , loading] = useAuthState(auth)
 
   const [admin]=UseAdmin(user)
+
+  if(loading){
+    return <Loading></Loading>
+  }
+
+  
     return (
         <div className='lg:px-40 lg:mt-14'>
 
@@ -30,7 +37,7 @@ const Dashboard = () => {
   </div> 
   <div class="drawer-side">
     <label for="my-drawer-2" class="drawer-overlay"></label> 
-    <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content text-xl">
+    <ul class="menu p-4 overflow-y-auto w-40 lg:w-80 bg-base-100 text-base-content text-base lg:text-xl">
      
       <li><Link to="/dashboard">My Profile</Link></li>
     { admin ? <li><Link to="/dashboard/manageallorders">Manage All Orders</Link></li> : <li><Link to="/dashboard/myorder">My Orders</Link></li>}

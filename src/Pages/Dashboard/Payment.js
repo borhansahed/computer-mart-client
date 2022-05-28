@@ -12,7 +12,7 @@ const Payment = () => {
     const {id} = useParams();
     const url = `https://cryptic-retreat-01074.herokuapp.com/booking/${id}`
   
-    const {data: booking  , isLoading} = useQuery(['booking' , id] , ()=> fetch(url , {
+    const {data: booking  , isLoading , refetch} = useQuery(['booking' , id] , ()=> fetch(url , {
         method:'GET',
         headers:{
 
@@ -33,16 +33,16 @@ const Payment = () => {
           <div class="card w-96 bg-base-100 ">
   <div class="card-body">
     <h2 class=" text-xl text-yellow-500">Hello Dear   {booking?.customerName ? booking.customerName  : <span className=''>Customer</span>} ,</h2>
-    <h2 class=" text-2xl font-bold">Please pay for <span className=''>{booking.product}</span> </h2>
-    <h2 class=" text-xl ">Your <span className='text-2xl'>{booking.quantity}</span> <span className='text-yellow-500'>{booking.product}</span> is waiting for you</h2>
-    <p className='text-2xl font-bold'>Pay $ {booking.price}</p>
+  { !booking.paid ? <h2 class=" text-2xl font-bold">Please pay for <span className=''>{booking.product}</span> </h2> : <p className='text-2xl'>Congratulations</p>}
+   { !booking.paid ? <h2 class=" text-xl ">Your <span className='text-2xl'>{booking.quantity}</span> <span className='text-yellow-500'>{booking.product}</span> is waiting for you</h2> : <h2 class=" text-xl ">Your <span className='text-2xl'>{booking.quantity}</span> <span className='text-yellow-500'>{booking.product}</span>  is going under shipping</h2> }
+   { !booking.paid ? <p className='text-2xl font-bold'>Pay $ {booking.price}</p> :  <p className='text-xl font-medium text-yellow-500'>Payment Successful</p>}
     
   </div>
 </div>
           <div class="card w-96 bg-base-100 shadow-xl mt-12">
   <div class="card-body">
   <Elements stripe={stripePromise}>
-    <CheckoutForm  key={booking._id} booking={booking} isLoading={isLoading}/>
+    <CheckoutForm  key={booking._id} booking={booking} isLoading={isLoading} refetch={refetch}/>
   </Elements>
   </div>
 </div>
