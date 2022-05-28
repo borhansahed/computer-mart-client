@@ -1,0 +1,76 @@
+[debug] [2022-05-27T17:40:18.638Z] ----------------------------------------------------------------------
+[debug] [2022-05-27T17:40:18.639Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-05-27T17:40:18.640Z] CLI Version:   11.0.0
+[debug] [2022-05-27T17:40:18.640Z] Platform:      win32
+[debug] [2022-05-27T17:40:18.640Z] Node Version:  v16.13.1
+[debug] [2022-05-27T17:40:18.641Z] Time:          Fri May 27 2022 23:40:18 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-05-27T17:40:18.641Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-27T17:40:18.644Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-05-27T17:40:18.713Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-27T17:40:18.713Z] > authorizing via signed-in user (mrsahed001@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\learn-react\computer-mart
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2022-05-27T17:40:20.103Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-05-27T17:40:20.103Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-05-27T17:41:25.128Z] Using project from CLI flag: computer-mart-fb654
+[debug] [2022-05-27T17:41:25.128Z] > refreshing access token with scopes: []
+[debug] [2022-05-27T17:41:25.129Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-05-27T17:41:25.394Z] <<< HTTP RESPONSE 200 {"date":"Fri, 27 May 2022 17:41:25 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-05-27T17:41:25.405Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/computer-mart-fb654 [none]
+[debug] [2022-05-27T17:41:26.042Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/computer-mart-fb654 200
+[debug] [2022-05-27T17:41:26.042Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/computer-mart-fb654 {"projectId":"computer-mart-fb654","projectNumber":"939265970450","displayName":"Computer-mart","name":"projects/computer-mart-fb654","resources":{"hostingSite":"computer-mart-fb654"},"state":"ACTIVE"}
+[info] i  Using project computer-mart-fb654 (Computer-mart) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-05-27T17:42:04.368Z] ----------------------------------------------------------------------
+[debug] [2022-05-27T17:42:04.370Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-05-27T17:42:04.370Z] CLI Version:   11.0.0
+[debug] [2022-05-27T17:42:04.370Z] Platform:      win32
+[debug] [2022-05-27T17:42:04.370Z] Node Version:  v16.13.1
+[debug] [2022-05-27T17:42:04.371Z] Time:          Fri May 27 2022 23:42:04 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-05-27T17:42:04.371Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-27T17:42:04.425Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-27T17:42:04.425Z] > authorizing via signed-in user (mrsahed001@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\learn-react\computer-mart
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+

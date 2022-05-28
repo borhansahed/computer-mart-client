@@ -5,7 +5,7 @@ import { async } from '@firebase/util';
 
 import Loading from '../../Shared/Loading';
 
-const CheckoutForm = ({ booking }) => {
+const CheckoutForm = ({ booking , isLoading }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [cardError, setCardError] = useState('');
@@ -18,7 +18,7 @@ const CheckoutForm = ({ booking }) => {
   const {_id, price, customer, customerName, quantity } = booking;
 
   useEffect(() => {
-    fetch('https://cryptic-retreat-01074.herokuapp.com/create-payment-intent', {
+    fetch('http://localhost:5000/create-payment-intent', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -102,7 +102,9 @@ const CheckoutForm = ({ booking }) => {
       })
       .then(res=>res.json())
       .then(data=>{
-        setProcessing(false);
+       if(isLoading){
+         return <Loading></Loading>
+       }
 
       })
     }

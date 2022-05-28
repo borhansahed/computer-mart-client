@@ -20,9 +20,9 @@ const Review = () => {
                     <div className='all-reviews-container lg:ml-16 '>
                         <div className='all-reviews '>
                             {
-                                reviews.reverse().slice(0, 3).map(review =>  <>   <p className='hidden'> review={review._id}</p>
+                                reviews.reverse().map(review =>  < >  
 
-                                    <div >
+                                    <div key={review._id}>
                                       
                                        
                                         <div className='review-card hover:shadow-lg'>

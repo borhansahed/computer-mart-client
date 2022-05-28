@@ -53,7 +53,7 @@ const MyOrders = () => {
         {
 
       orders.map((order , index) => 
-        <tr className='text-xl'>
+        <tr className='text-xl' key={order._id}>
         <th>{index +1}</th>
         <td>{order.customerName}</td>
         <td>{order.customer}</td>
@@ -62,7 +62,7 @@ const MyOrders = () => {
         <td>$ {order.price ?   order.price :  10062}</td>
        <td>{(order.price && !order.paid ) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-outline btn-sm btn-warning text-base'>Pay</button></Link> }
        { (order.price && order.paid ) && <button  className=' text-base px-5 btn-sm ml-4 btn btn-outline btn-success'>Paid</button>      }
-      {!order.paid && <button className='btn btn-outline btn-sm btn-error text-base ml-3'>Cancel</button>}
+      {!order.paid ? <button className='btn btn-outline btn-sm btn-error text-base ml-3'>Cancel</button> : <button className='btn btn-outline btn-sm btn-error text-base ml-3'>Pending</button> }
        </td>
       
       </tr>
