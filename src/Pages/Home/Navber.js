@@ -93,6 +93,7 @@ const Navber = () => {
         <button className='btn btn-outline w-14 lg:w-20 ml-2 lg:ml-3 btn-warning  btn-xs lg:btn-sm  text-base' onClick={handleLogout}>SignOut</button>
       </ul>
     </div> }
+    {user && <button className='btn btn-outline w-14 lg:w-20 ml-2 lg:ml-3 btn-warning  btn-xs lg:btn-sm  text-base' onClick={handleLogout}>SignOut</button>}
 
       </div>
  
