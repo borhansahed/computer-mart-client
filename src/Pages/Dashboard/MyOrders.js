@@ -44,7 +44,7 @@ const MyOrders = () => {
         <th className='text-xl'>Quantity</th>
         <th className='text-xl'> $ Price</th>
        
-        <th className='text-xl'></th>
+        <th className='text-xl'>Payment/DeliveryStatus</th>
        
       </tr>
     </thead>
@@ -60,9 +60,9 @@ const MyOrders = () => {
         <td>{order.product}</td>
         <td>{order.quantity}</td>
         <td>$ {order.price ?   order.price :  10062}</td>
-       <td>{(order.price && !order.paid ) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-outline btn-sm btn-warning text-base'>Pay</button></Link> }
-       { (order.price && order.paid ) && <button  className=' text-base px-5 btn-sm ml-4 btn btn-outline btn-success'>Paid</button>      }
-      {!order.paid ? <button className='btn btn-outline btn-sm btn-error text-base ml-3'>Cancel</button> : <button className='btn btn-outline btn-sm btn-error text-base ml-3'>Pending</button> }
+       <td>{(order.price && !order.paid ) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-outline btn-sm btn-warning text-base px-5'>Pay</button></Link> }
+       { (order.price && order.paid ) && <button  className=' text-base px-5 btn-sm  btn btn-outline btn-success'>Paid</button>      }
+      {!order.paid ? <button className='btn btn-outline btn-sm btn-error text-base ml-3'>Cancel</button> : <button className='btn btn-outline btn-sm btn-warning text-base ml-3'>Pending</button> }
        </td>
       
       </tr>

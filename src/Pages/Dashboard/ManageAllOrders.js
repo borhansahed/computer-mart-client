@@ -37,7 +37,12 @@ const ManageAllOrders = () => {
       {
           bookings.map((booking , index)=><AllOrderRow booking={booking}
           key={booking._id}
-          index={index}></AllOrderRow>)
+          index={index}
+          refetch={refetch}
+          isLoading={isLoading}
+          >
+
+          </AllOrderRow>)
       }
      
       

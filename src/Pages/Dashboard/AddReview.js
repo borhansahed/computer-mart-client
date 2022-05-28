@@ -24,7 +24,7 @@ const AddReview = () => {
            
           
          }
-         fetch('http://localhost:5000/review' , {
+         fetch('https://cryptic-retreat-01074.herokuapp.com/review' , {
              method: 'POST',
              headers:{
                  'content-type':'application/json'
@@ -46,9 +46,11 @@ const AddReview = () => {
     }
     return (
         <div>
-            <h1>add your review</h1>
+            <div className='mx-36 lg:mx-0'>
+            <h2 className='text-2xl text-yellow-500 mt-3 mb-3 '>Add Your Review</h2>
+            </div>
 
-            <form  onSubmit={handleAddReview} className="w-2/4">
+            <form  onSubmit={handleAddReview} className=" mx-auto w-60  lg:mx-0 lg:w-2/4">
 
                 <div className="form-control ">
                     <label className="label">

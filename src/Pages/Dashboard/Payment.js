@@ -16,7 +16,7 @@ const Payment = () => {
         method:'GET',
         headers:{
 
-           authorization : `Bearer ${localStorage.getItem('accessToken')}`
+          'authorization' : `Bearer ${localStorage.getItem('accessToken')}`
 
         }
 

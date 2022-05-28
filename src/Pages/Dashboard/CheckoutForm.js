@@ -18,11 +18,12 @@ const CheckoutForm = ({ booking , isLoading }) => {
   const {_id, price, customer, customerName, quantity } = booking;
 
   useEffect(() => {
-    fetch('http://localhost:5000/create-payment-intent', {
+   if(price){
+    fetch('https://cryptic-retreat-01074.herokuapp.com/create-payment-intent', {
       method: 'POST',
       headers: {
-        'content-type': 'application/json',
-        'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+        'Content-Type': 'application/json'
+        // 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
       },
       body: JSON.stringify({ price })
     })
@@ -32,6 +33,7 @@ const CheckoutForm = ({ booking , isLoading }) => {
           setClientSecret(data.clientSecret);
         }
       });
+   }
 
   }, [price])
 
@@ -92,7 +94,7 @@ const CheckoutForm = ({ booking , isLoading }) => {
             transactionId: paymentIntent.id
       }
       fetch(`https://cryptic-retreat-01074.herokuapp.com/booking/${_id}` , {
-        method: 'PATCH',
+        method: 'PUT',
         headers: {
           'content-type': 'application/json',
           'authorization': `Bearer ${localStorage.getItem('accessToken')}`

@@ -24,7 +24,7 @@ const Dashboard = () => {
                 
   <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content ">
-        <h2 className='lg:text-4xl text-2xl  font-medium'>Welcome To Your <span className=' text-3xl lg:text-5xl text-yellow-500'>Dashboard</span> </h2>
+        <h2 className='lg:text-4xl text-2xl  font-medium hidden lg:block'>Welcome To Your <span className=' text-3xl lg:text-5xl text-yellow-500'>Dashboard</span> </h2>
             <Outlet></Outlet>
   
   </div> 
