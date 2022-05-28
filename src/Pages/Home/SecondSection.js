@@ -1,28 +1,22 @@
 
 import React from 'react';
-import logo from '../../images/section6.jpg'
+
+import logo from '../../images/homeSection1.jpg'
+import logo1 from '../../images/homeSection2.jpg'
 import '../Css/SecondSection.css'
 
 const SecondSection = () => {
     return (
         <>
-        <div>
-            <div className='lg:mt-16 section-container'>
-                <h2 className="lg:text-5xl text-center ">Best Coding Setup <br />
-               <span className='lg:text-6xl text-yellow-500'> 2022</span></h2>
-            {/* <div className="hero ">
-  <div className="hero-content flex-col lg:flex-row-reverse">
-    <img src={logo} className="max-w-sm rounded-lg shadow-2xl" />
-    <div>
-      <h1 className="text-5xl font-bold">Box Office News!</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
-    </div>
-  </div>
-</div> */}
+        <div className='section-container lg:mt-20  '>
 
-
-            </div>
+          <div>
+             <img className='' src={logo1} alt="" />
+          </div>
+          <div className=''>
+            <h3 className='text-3xl lg:text-5xl text-center banner-caption-header font-bold'> Best Coding Monitor <br /><span className='text-4xl lg:text-6xl text-yellow-400 font-bold'>2022</span>  </h3>
+            <p className='text-base lg:text-3xl banner-caption-body'> <span className='text-yellow-400 lg:text-4xl font-bold mr-3'>40% OFF</span>   We've tested over 230 monitors, and below you'll find our recommendations for the best coding monitors for many needs and budgets.</p>
+          </div>
 
         </div>
        </>

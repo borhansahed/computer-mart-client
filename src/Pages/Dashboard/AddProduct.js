@@ -13,8 +13,8 @@ const AddProduct = () => {
         const name = event.target.name.value;
         const price = event.target.price.value;
          const picture = event.target.url.value;
-         const MinimumOrderQuantity = event.target.minimumOrderQuantity.value;
-         const AvailableQuantity = event.target.availableQuantity.value;
+         const MinimumOrderQuantity = parseInt(event.target.minimumOrderQuantity.value);
+         const AvailableQuantity = parseInt(event.target.availableQuantity.value);
          const description = event.target.description.value;
 
         //   if(   AvailableQuantity > !MinimumOrderQuantity){
@@ -96,14 +96,14 @@ const AddProduct = () => {
                     <label className="label">
                         <span className="label-text text-base lg:text-xl">AvailableQuantity</span>
                     </label>
-                    <input className="input input-bordered" type="tel" placeholder="availableQuantity" {...register("availableQuantity", { required: true, minLength: 1, maxLength: 3  })} />
+                    <input className="input input-bordered" type="number" placeholder="availableQuantity" {...register("availableQuantity", { required: true, minLength: 1, maxLength: 3  })} />
                    
                 </div>
                 <div className="form-control mb-4">
                     <label className="label">
                         <span className="label-text text-base lg:text-xl">MinimumOrderQuantity</span>
                     </label>
-                    <input className="input input-bordered" type="tel" placeholder="minimumOrderQuantity" {...register("minimumOrderQuantity", { required: true, minLength: 1, maxLength:3 })} />
+                    <input className="input input-bordered" type="number" placeholder="minimumOrderQuantity" {...register("minimumOrderQuantity", { required: true, minLength: 1, maxLength:3 })} />
                     {error && <span className='text-red-500 text-xl'>{error}</span>}
                 </div>
 
