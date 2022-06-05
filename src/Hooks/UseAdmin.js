@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
+import Loading from "../Shared/Loading";
 
 const UseAdmin = user =>{
-
+        
      const [admin , setAdmin] = useState(false);
+    
 
      useEffect( () =>{
          const email = user?.email;
@@ -18,9 +20,11 @@ const UseAdmin = user =>{
             })
             .then(res => res.json())
             .then (data =>{
+               
                setAdmin(data.admin)
+              
             })
-        
+          
          }
 
      } ,[user])

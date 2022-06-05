@@ -1,8 +1,12 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, Navigate } from 'react-router-dom';
+import UseAdmin from '../../Hooks/UseAdmin';
+import Loading from '../../Shared/Loading';
 import '../Css/Products.css'
 
 const Products = ({product}) => {
+ 
 
     const {name , price , description , picture , _id} =product;
 
@@ -19,7 +23,9 @@ const Products = ({product}) => {
     <p className='text-base lg:text-xl'>{description?.slice(0,100)} ...<span className='text-yellow-500'>See More</span></p>
     <p className=' text-2xl lg:text-4xl font-bold '> <span className=''>$</span>{price}</p>
     <div className="card-actions justify-end">
-      <Link className="btn btn-outline btn-warning btn-sm lg:text-xl lg:btn lg:btn-outline" to={`/purchase/${_id}`}>Purchase</Link>
+    
+        <Link className="btn btn-outline btn-warning btn-sm lg:text-xl lg:btn lg:btn-outline" to={`/purchase/${_id}`}>Purchase</Link>
+    
     </div>
   </div>
 </div>

@@ -17,9 +17,9 @@ const AddProduct = () => {
          const AvailableQuantity = parseInt(event.target.availableQuantity.value);
          const description = event.target.description.value;
 
-        //   if(   AvailableQuantity > !MinimumOrderQuantity){
-        //       return toast.error('Select MinimumQuantity is lower than AvailableQuantity');
-        //   }
+          if( AvailableQuantity < MinimumOrderQuantity){
+              return toast.error('Select MinimumQuantity is lower than AvailableQuantity');
+          }
 
          console.log(name , price , picture , AvailableQuantity , MinimumOrderQuantity ,description)
          const products ={

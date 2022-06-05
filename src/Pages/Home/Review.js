@@ -20,7 +20,7 @@ const Review = () => {
                     <div className='all-reviews-container lg:ml-16 '>
                         <div className='all-reviews '>
                             {
-                                reviews.reverse().map(review =>  < >  
+                                reviews.reverse().map(review =>   
 
                                     <div key={review._id}>
                                       
@@ -43,7 +43,7 @@ const Review = () => {
                                       
                                     </div>
 
-                                </>)
+                                )
                             }
 
                         </div>

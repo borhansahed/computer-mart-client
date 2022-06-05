@@ -79,6 +79,7 @@ const CheckoutForm = ({ booking , isLoading , refetch }) => {
       setProcessing(false);
     }
     else{
+      alert('ARE YOU SURE')
       console.log(paymentIntent)
       setTransaction(paymentIntent.id)
       setCardError('')
@@ -101,13 +102,17 @@ const CheckoutForm = ({ booking , isLoading , refetch }) => {
       })
       .then(res=>res.json())
       .then(data=>{
+ 
+        
        refetch();
+
+        if(processing){
+      return <Loading></Loading>
+    }
 
       })
     }
-    if(processing){
-      return <Loading></Loading>
-    }
+   
   
 
   
@@ -119,7 +124,7 @@ const CheckoutForm = ({ booking , isLoading , refetch }) => {
  
   return (
     <>
-      <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
         <CardElement
           options={{
             style: {
@@ -141,9 +146,8 @@ const CheckoutForm = ({ booking , isLoading , refetch }) => {
         </button> : <button className='btn  btn-sm btn-success text-base mt-4 font-medium text-white' >
           Paid
         </button>}
-      </form>
 
-      {
+  {
         cardError && <p className='text-red-600 text-xl'>{cardError}</p>
       }
       {
@@ -153,6 +157,10 @@ const CheckoutForm = ({ booking , isLoading , refetch }) => {
         success && <p className='text-green-600 text-xl'>Your transaction id :   <span className='text-yellow-500'>{transaction}</span> </p>
       }
    
+
+      </form>
+   
+    
     </>
   );
 };

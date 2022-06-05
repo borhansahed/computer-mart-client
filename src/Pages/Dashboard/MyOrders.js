@@ -32,13 +32,13 @@ const MyOrders = () => {
     return (
         <div>
             <h3 className='text-3xl mt-4 text-yellow-500 mb-3'> Your Orders</h3>
-            <div class="overflow-x-auto">
+            <div class="w-screen overflow-x-auto lg:w-full">
   <table class="table w-full">
    
     <thead>
       <tr className='text-yellow-500'>
         <th></th>
-        <th className='text-2xl font-medium'>Name</th>
+        <th className='text-base lg:text-2xl font-medium'>Name</th>
         <th className='text-2xl font-medium'>Email</th>
         <th className='text-2xl font-medium'>Product</th>
         <th className='text-2xl font-medium'>Quantity</th>

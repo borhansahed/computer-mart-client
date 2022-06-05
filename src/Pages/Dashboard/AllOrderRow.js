@@ -7,15 +7,15 @@ const AllOrderRow = ({booking , index , isLoading}) => {
         return <Loading></Loading>
     }
     return (
-        <tr className='text-xl'>
+        <tr className='text-base lg:text-xl'>
               <th>{index + 1}</th>
               <td>{booking.customer}</td>
               <td>{booking.product}</td>
               <td>{booking.quantity}</td>
               <td>$ {booking.price}</td>
               <td>{booking.phone ? booking.phone : <p className='text-yellow-500'>No number</p>}</td>
-              <td>{booking.paid ? <button className='text-base px-4 btn-sm  btn btn-outline btn-success'>Paid</button> : <button className='text-base  btn-sm  btn btn-outline btn-error'>Unpaid</button> }
-              {booking.paid ? <button className='text-base  btn-sm  btn btn-outline btn-warning ml-3'>Pending</button> : <button className='text-base  btn-sm  btn btn-outline btn-error ml-3'>Cancel</button> }
+              <td>{booking.paid ? <button className='text-base px-2 lg:px-4 btn-xs lg:btn-sm  btn btn-outline btn-success'>Paid</button> : <button className='text-base btn-xs lg:btn-sm btn btn-outline btn-error'>Unpaid</button> }
+              {booking.paid ? <button className='text-base btn-xs lg:btn-sm  btn btn-outline btn-warning ml-3'>Pending</button> : <button className='text-base btn-xs lg:btn-sm  btn btn-outline btn-error ml-3'>Cancel</button> }
               </td>
               
             </tr>

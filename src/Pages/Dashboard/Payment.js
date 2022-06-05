@@ -21,6 +21,7 @@ const Payment = () => {
         }
 
     }).then(res => res.json()))
+    refetch()
 
     if(isLoading){
         return <Loading></Loading>

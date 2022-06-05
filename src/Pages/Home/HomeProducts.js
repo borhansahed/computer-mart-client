@@ -10,7 +10,7 @@ const HomeProducts = () => {
             <h1 className='text-3xl lg:text-5xl text-center'>New <span className='text-4xl lg:text-6xl text-yellow-400 font-bold'>Products</span> <br /> In Our Shop</h1>
             <div className=' flex flex-wrap justify-center gap-x-32 lg:gap-y-16 gap-y-10 lg:mt-12 mt-8 mb-9'>
            {
-               products.reverse().slice(6).map(product=> <Products key={product._id}
+               products.slice(7).map(product=> <Products key={product._id}
                product={product}>
 
                </Products>)
