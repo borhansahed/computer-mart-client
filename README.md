@@ -5,7 +5,7 @@
 
 
 
- ## About Website
+## About Website
  This website sells computer parts.
  This is a project on 'React.js' 'React Routing', 'React Hooks' and 'Firebase Authentication', JSON WEB TOKEN, Authorization, MongoDB, CURD operation, Backend is also used here.
  Tailwind CSS and it's libraries like daisyUI, Tailwind component is used for carousel, React Icons is used for icons, and react-router-dom is used for routing.
@@ -19,7 +19,7 @@
 
 
 
- ## Website Features
+## Website Features
 
     * It has admin and users role 
     * It has a stripe payment method
