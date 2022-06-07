@@ -21,11 +21,11 @@
 
  ## Website Features
 
-    * It has admin and users role. 
+    * It has admin and users role 
     * It has a stripe payment method
-    * After payment order status will be paid Delivery status will be pending.
-    * Users can order items and also they submit a review.
-    * Admin users manage all products and orders and also add products. 
+    * After payment order status will be paid Delivery status will be pending
+    * Users can order items and also they submit a review
+    * Admin users manage all products and orders and also add products
 
 
 
