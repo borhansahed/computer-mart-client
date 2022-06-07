@@ -30,4 +30,24 @@
 
 
 ## Technologies Used
+    * React
+    * Firebase
+    * React Router
+    * React hook Form
+    * React Query
+    * Node
+    * Express
+    * Mongodb
+    * React Icons
+    * Heroku
+    * Tailwind CSS
+    * React Hooks
+    * React toastify
+
+
+
+
+
+
+
 
