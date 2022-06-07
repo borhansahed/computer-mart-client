@@ -20,6 +20,7 @@
 
 
  ## Website Features
+
     * It has admin and users role. 
     * It has a stripe payment method
     * After payment order status will be paid Delivery status will be pending.
@@ -31,20 +32,19 @@
 
 ## Technologies Used
 
-    * React
-    * Firebase
-    * React Router
-    * React hook Form
-    * React Query
-    * Node
-    * Express
-    * Mongodb
-    * React Icons
-    * Heroku
-    * Tailwind CSS
-    * React Hooks
-    * React toastify
-
+  * React
+  * Firebase
+  * React Router
+  * React hook Form
+  * React Query
+  * Node
+  * Express
+  * Mongodb
+  * React Icons
+  * Heroku
+  * Tailwind CSS
+  * React Hooks
+  * React toastify
 
 
 
