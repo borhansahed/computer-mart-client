@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Computer Mart
 
-Computer Mart https://computer-mart-fb654.web.app .
+ https://computer-mart-fb654.web.app 
+
+ ## About Website
+ This website sells computer parts. It has admin and users role.It has a stripe payment method and after payment order status will be paid Delivery status will be pending.JWT authentication.Logged in users can order items and also they submit a review. Admin users manage all products and orders and also add products. 
+ 
+
 
 ## Available Scripts
 
