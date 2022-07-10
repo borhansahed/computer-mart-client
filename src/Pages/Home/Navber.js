@@ -58,7 +58,7 @@ const Navber = () => {
              
              {user && <li ><Link to='/dashboard'>Dashboard</Link></li>}
              <li ><Link to='/blogs'>Blogs</Link></li>
-             <li ><Link to='/myprotfolio'>My Portfolio</Link></li>
+             <li ><Link to='/about'>About</Link></li>
              {!user && <li ><Link to='/login'>Login</Link></li>}
             </ul>
           </div>
@@ -71,7 +71,7 @@ const Navber = () => {
          {user && <li ><Link to='/dashboard'>Dashboard</Link></li>}
         
           <li ><Link to='/blogs'>Blogs</Link></li>
-          <li ><Link to='/myprotfolio'>My Portfolio</Link></li> 
+          <li ><Link to='/about'>About</Link></li> 
           {!user && <li ><Link to='/login'>Login</Link></li>}
        </ul>
         </div>

@@ -23,6 +23,7 @@ import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
 import Payment from './Pages/Dashboard/Payment';
+import About from './Pages/Home/About';
 
 function App() {
   return (
@@ -59,7 +60,7 @@ function App() {
     <Route path='/blogs' element={ <Blogs />}></Route>
     <Route path='/login' element={ <Login />}></Route>
     <Route path='/register' element={<Register/>}></Route>
-    <Route path='/myprotfolio' element={ <MyPortfolio />}></Route>
+    <Route path='/about'element={<About></About>}></Route>
     
    
     <Route path='*' element={ <NotFound/>}></Route>
