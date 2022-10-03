@@ -15,7 +15,7 @@ const Products = ({product}) => {
       Navigate(path);
     }
     return (
-        <div className='products-container'>
+        <div className='products-container   mb-8'>
             <div className="card w-72 products-card lg:w-96 bg-base-100 shadow-xl">
   <figure><img src={picture} alt="Shoes" /></figure>
   <div className="card-body">

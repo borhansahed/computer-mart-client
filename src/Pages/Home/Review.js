@@ -17,7 +17,7 @@ const Review = () => {
 
 
 
-                    <div className='all-reviews-container lg:ml-16 '>
+                    <div className='all-reviews-container  lg:ml-16 overflow-x-scroll lg:space-x-10   scrollbar-hide'>
                         <div className='all-reviews '>
                             {
                                 reviews.reverse().map(review =>   

@@ -3,6 +3,7 @@ module.exports = {
   daisyui: {
     themes: [
       {
+        
         mytheme: {
         
    primary: "#EBA10F",
@@ -27,5 +28,5 @@ module.exports = {
     ],
   },
  
-  plugins: [require("daisyui"), require('tw-elements/dist/plugin')],
+  plugins: [require("daisyui"), require('tw-elements/dist/plugin'),  require('tailwind-scrollbar-hide')],
 }
