@@ -1,5 +1,7 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useQuery } from 'react-query';
+import { toast } from 'react-toastify';
 import Loading from '../../Shared/Loading';
 import AllOrderRow from './AllOrderRow';
 
@@ -15,9 +17,45 @@ const ManageAllOrders = () => {
       if(isLoading){
           return <Loading></Loading>
       }
+
+      const deleteOrder = (id) =>{
+        const url = `https://cryptic-retreat-01074.herokuapp.com/bookings/${id}`
+        fetch(url, {
+          method: 'DELETE',
+        }).then(res => res.json())
+        .then(value => {
+          
+         <Loading></Loading>
+        toast.success("Cancel Order");
+          refetch();
+         
+        })
+    }
+
+    const shipment = (id) =>{
+    
+      fetch(`https://cryptic-retreat-01074.herokuapp.com/bookings/${id}`,{
+          method:'PUT',
+          
+      }).then(res =>{
+
+        if(res.status === 403){
+          toast.error("Pls Try again later")
+        }
+      return res.json() 
+      }).then(data =>{
+
+        <Loading></Loading>
+         toast.success("Shipment done Successfully");
+             refetch();
+             
+      
+      })
+
+  }
     return (
         <div>
-         <h4 className='text-3xl mt-3 mb-3 text-yellow-500'>All Orders </h4>
+         <h4 className=' text-2xl lg:text-3xl mt-3 mb-3 text-yellow-400  ml-16 lg:ml-0'>All Orders </h4>
 
          <div class="w-screen lg:w-full  overflow-x-auto">
   <table class="table w-screen lg:w-full">
@@ -40,6 +78,8 @@ const ManageAllOrders = () => {
           index={index}
           refetch={refetch}
           isLoading={isLoading}
+          deleteOrder = {deleteOrder}
+          shipment = {shipment}
           >
 
           </AllOrderRow>)

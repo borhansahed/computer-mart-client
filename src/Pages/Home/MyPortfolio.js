@@ -14,7 +14,7 @@ const MyPortfolio = () => {
                <h3 className='text-3xl text-yellow-500'>Mohammad Borhan Uddin Sahed</h3>
              <p className='w-96 text-2xl'>Goal <br />
            <span className='text-yellow-500 text-xl'>
-           My mission is learn web development properly! And try to learn more about programming.This is year my vision is learn complete web development with Jhankar Mahbub! I want to intern this year.And i want to Develop my skills. My goals is want to be world class programmer. I want to learn full stack development ! I want create many apps and websites! Inshaallah i can do it!</span></p>
+           My mission is learn web development properly! And try to learn more about programming.This is year my vision is learn complete web development with Jhankar Mahbub! I want to intern this year.And i want to Develop my skills. My goals is want to be world className programmer. I want to learn full stack development ! I want create many apps and websites! Inshaallah i can do it!</span></p>
                <h3 className='text-2xl'>Education</h3>
                
                <p className='text-xl text-yellow-500'>

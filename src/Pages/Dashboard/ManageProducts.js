@@ -1,10 +1,22 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 import UseProducts from '../../Hooks/UseProducts';
 const ManageProducts = () => {
-    const [products ] =UseProducts()
+    const [products , setProducts ] = UseProducts();
+
+    const deleteProduct = (id) =>{
+      fetch(`https://cryptic-retreat-01074.herokuapp.com/product/${id}`,{
+         method:'DELETE'
+      }).then(res => res.json())
+      .then(data =>{
+        const remain = products.filter(pro => pro._id !== id);
+        toast("Deleted your Product");
+        setProducts(remain);
+      })
+    }
     return (
         <div>
-            <h2 className='lg:text-3xl text-2xl mx-36 lg:mx-0 text-yellow-500 mt-4 mb-3'> Managed Products</h2>
+            <h2 className='lg:text-3xl text-2xl mx-20 lg:mx-0 text-yellow-400 mt-4 mb-5'> Managed Products</h2>
 
             <div class="overflow-x-auto">
   <table class="table  lg:w-full w-72">
@@ -33,7 +45,7 @@ const ManageProducts = () => {
         <td>{p?.MinimumOrderQuantity}</td>
         <td>$ {p.price} 
         </td>
-      <td><button className='btn btn-outline btn-xs lg:btn-sm btn-error lg:text-base lg:ml-4'>Delete</button></td>
+      <td><button onClick={() => deleteProduct(p._id)} className='btn btn-outline btn-xs lg:btn-sm btn-error lg:text-base lg:ml-4'>Delete</button></td>
         
       </tr>)
 

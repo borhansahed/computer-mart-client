@@ -103,12 +103,12 @@ const CheckoutForm = ({ booking , isLoading , refetch }) => {
       .then(res=>res.json())
       .then(data=>{
  
-        
+        <Loading></Loading>
        refetch();
 
-        if(processing){
-      return <Loading></Loading>
-    }
+        
+     
+    
 
       })
     }
@@ -141,20 +141,20 @@ const CheckoutForm = ({ booking , isLoading , refetch }) => {
             },
           }}
         />
-       { !booking.paid ? <button className='btn  btn-sm btn-warning text-base mt-4 font-medium text-white' type="submit" disabled={!stripe || !clientSecret}>
+       { !booking.paid ? <button classNameName='btn  btn-sm btn-warning text-base mt-4 font-medium text-white' type="submit" disabled={!stripe || !clientSecret}>
           Pay
-        </button> : <button className='btn  btn-sm btn-success text-base mt-4 font-medium text-white' >
+        </button> : <button classNameName='btn  btn-sm btn-success text-base mt-4 font-medium text-white' >
           Paid
         </button>}
 
   {
-        cardError && <p className='text-red-600 text-xl'>{cardError}</p>
+        cardError && <p classNameName='text-red-600 text-xl'>{cardError}</p>
       }
       {
-        success && <p className='text-green-600 text-xl'>{success}</p>
+        success && <p classNameName='text-green-600 text-xl'>{success}</p>
       }
       {
-        success && <p className='text-green-600 text-xl'>Your transaction id :   <span className='text-yellow-500'>{transaction}</span> </p>
+        success && <p classNameName='text-green-600 text-xl'>Your transaction id :   <span classNameName='text-yellow-500'>{transaction}</span> </p>
       }
    
 

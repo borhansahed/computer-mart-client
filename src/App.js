@@ -11,8 +11,7 @@ import Register from './Pages/Login/Register';
 import RequireAuth from './Pages/Login/RequireAuth'
 import Dashboard from './Pages/Dashboard/Dashboard';
 import AddReview from './Pages/Dashboard/AddReview';
-import MyPortfolio from './Pages/Home/MyPortfolio';
-import HomeProducts from './Pages/Home/HomeProducts';
+
 import { ToastContainer } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -24,6 +23,7 @@ import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
 import Payment from './Pages/Dashboard/Payment';
 import About from './Pages/Home/About';
+import MyUpdatedProfile from './Pages/Dashboard/MyUpdatedProfile';
 
 function App() {
   return (
@@ -46,7 +46,8 @@ function App() {
     </RequireAuth>
   
   }>
-    <Route index element={<MyProfile></MyProfile>}></Route>
+    <Route index element={<MyUpdatedProfile></MyUpdatedProfile>}>
+    </Route>
     <Route path="myorder" element={<MyOrders></MyOrders>}></Route>
     <Route path="addreview" element={<AddReview/>}></Route>
     <Route path="payment/:id" element={<Payment/>}></Route>
@@ -54,7 +55,7 @@ function App() {
     <Route path="manageallorders" element={<ManageAllOrders/>}></Route>
     <Route path="addproduct" element={<AddProduct/>}></Route>
     <Route path="manageproducts" element={<ManageProducts/>}></Route>
-    
+    <Route path='editProfile' element={<MyProfile></MyProfile>}></Route>
   </Route>
   
     <Route path='/blogs' element={ <Blogs />}></Route>

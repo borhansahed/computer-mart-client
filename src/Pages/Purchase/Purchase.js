@@ -75,12 +75,7 @@ const Purchase = () => {
 
     return (
         <div className='mt-8 lg:mt-16 '>
-            <div className='lg:text-4xl text-center text-yellow-400'>
-              
-            <h1>{user.displayName}</h1>
-            <h1>{user.email}</h1>
-          
-            </div>
+
 
             <div className=' flex flex-wrap justify-center gap-x-32 lg:gap-y-16 gap-y-10 lg:mt-12 mt-8 mb-16'>
 

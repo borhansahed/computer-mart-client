@@ -21,7 +21,7 @@ const Footer = () => {
                 <h1 className='text-3xl lg:text-4xl text-center  pt-20'>Join <span className='text-yellow-500 font-bold'> To</span>  Newsletter</h1>
                 <p className='text-base lg:text-xl text-center mt-5 '>By adding these at the beginning of your emails you will sound more friendly and social.</p>
                 <div className='flex justify-center mt-8 lg:mt-14 '>
-                    <input className='lg:w-2/6 lg:p-2 p-1 text-xl' type="email" name="email" placeholder='Your email address' id="" />
+                    <input className='lg:w-2/6 lg:p-2 p-1 text-xl' type="email" placeholder='Your email address' id="" />
                     <input type="submit" className="bg-yellow-500 px-3 lg:px-10 text-xl" />
                 </div>
             </div>
@@ -38,7 +38,8 @@ const Footer = () => {
                     <FaYoutube className='inline ml-3 '/>
                   </div>
                 </div>
-                <div className='mb-4 lg:mb-0'>
+                <div className='flex items-center justify-center'>
+                  <div className='mb-4 lg:mb-0 lg:mr-4 mr-6'>
                     <h4 className='text-2xl lg:text-3xl  mb-1 lg:mb-3 lg:mt-8'>Product</h4>
                     <div className='text-base lg:text-xl'>
                         <p>About App</p>
@@ -47,8 +48,8 @@ const Footer = () => {
                         <p>Store</p>
                         <p>Help and support</p>
                     </div>
-                </div>
-                <div className='mb-4 lg:mb-0'>
+                </div>  
+                <div className='mb-4 lg:mb-0 ml-8 lg:ml-14 '>
                     <h1 className=' mb-1 lg:mb-3 text-2xl lg:text-3xl '>Contact Details</h1>
 
                     <div className='
@@ -60,6 +61,8 @@ const Footer = () => {
                     </div>
 
                 </div>
+                </div>
+                
 
                 <div className=' mb-1 lg:mb-3 text-2xl lg:text-3xl'>
                     <h3>Social</h3>

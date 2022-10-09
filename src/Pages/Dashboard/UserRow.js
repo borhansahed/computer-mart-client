@@ -1,7 +1,8 @@
 import React from 'react';
 import { toast } from 'react-toastify';
+import Loading from '../../Shared/Loading';
 
-const UserRow = ({user , index , refetch}) => {
+const UserRow = ({user , index , refetch, removeUser}) => {
     const {email , role}=user;
 
     const handleAdmin = () =>{
@@ -31,14 +32,16 @@ const UserRow = ({user , index , refetch}) => {
             
         })
     }
+
+   
     return (
        
               <tr>
            
            <th>{index + 1}</th>
            <td>{email}</td>
-           <td>{role !== 'admin' && <button onClick={handleAdmin} className='btn btn-outline btn-warning text-1xl btn-sm'>Make Admin</button>}</td>
-           <td><button className='btn btn-outline  btn-sm btn-error'>Remove user</button></td>
+           <td>{role !== 'admin' && <button onClick={handleAdmin} className='btn btn-outline btn-sm btn-warning text-base'>Make Admin</button>}</td>
+           <td><button  onClick={() => removeUser(user._id)} className='btn btn-outline btn-sm btn-error text-base'>Remove user</button></td>
            
          </tr>
        

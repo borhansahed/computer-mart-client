@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
+import { toast } from 'react-toastify';
 import Loading from '../../Shared/Loading';
 import UserRow from './UserRow';
 
@@ -17,10 +18,25 @@ const User = () => {
         return <Loading></Loading>
     }
 
+    const removeUser = (id) =>{
+  
+      const url = `https://cryptic-retreat-01074.herokuapp.com/user/${id}`
+      fetch(url, {
+        method: 'DELETE',
+      }).then(res => res.json())
+      .then(value => {
+        
+       <Loading></Loading>
+      toast.success("User Deleted");
+        refetch();
+       
+      })
+  }
+
     
     return (
         <div>
-            <h3 className='text-3xl mt-3 mb-3 text-yellow-500'>All Users</h3>
+            <h3 className=' lg:text-3xl text-2xl mx-20 lg:mx-0 text-yellow-400 mt-4 mb-5'>All Users</h3>
 
             <div class="overflow-x-auto">
   <table class="table w-full">
@@ -29,9 +45,9 @@ const User = () => {
       <tr className='text-xl'>
         <th></th>
         
-        <th className='text-xl text-yellow-500'>User</th>
-        <th className='text-xl text-yellow-500'>Make Admin</th>
-        <th className='text-xl text-yellow-500'> Remove User </th>
+        <th className='text-base lg:text-xl text-yellow-500'>User</th>
+        <th className='text-base lg:text-xl text-yellow-500'>Make Admin</th>
+        <th className='text-base lg:text-xl text-yellow-500'> Remove User </th>
       </tr>
     </thead>
     <tbody>
@@ -42,6 +58,7 @@ const User = () => {
         key={user._id}
        index={index}
        refetch={refetch}
+       removeUser = {removeUser}
        >
 
 
