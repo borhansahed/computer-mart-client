@@ -10,7 +10,7 @@ const useToken = user =>{
          
          const currentUser = {email: email , password : password};
           if(email){
-              fetch(`https://cryptic-retreat-01074.herokuapp.com/user/${email}`,{
+              fetch(`https://computer-mart2.onrender.com/user/${email}`,{
                   method:'PUT',
                   headers:{
                       'content-type': 'application/json'

@@ -7,7 +7,7 @@ import AllOrderRow from './AllOrderRow';
 
 const ManageAllOrders = () => {
 
-    const {data: bookings , isLoading , refetch}  =useQuery('users' , () => fetch('https://cryptic-retreat-01074.herokuapp.com/bookings' , {
+    const {data: bookings , isLoading , refetch}  =useQuery('users' , () => fetch('https://computer-mart2.onrender.com/bookings' , {
         method: 'GET',
         headers:{
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -19,7 +19,7 @@ const ManageAllOrders = () => {
       }
 
       const deleteOrder = (id) =>{
-        const url = `https://cryptic-retreat-01074.herokuapp.com/bookings/${id}`
+        const url = `https://computer-mart2.onrender.com/bookings/${id}`
         fetch(url, {
           method: 'DELETE',
         }).then(res => res.json())
@@ -34,7 +34,7 @@ const ManageAllOrders = () => {
 
     const shipment = (id) =>{
     
-      fetch(`https://cryptic-retreat-01074.herokuapp.com/bookings/${id}`,{
+      fetch(`https://computer-mart2.onrender.com/bookings/${id}`,{
           method:'PUT',
           
       }).then(res =>{

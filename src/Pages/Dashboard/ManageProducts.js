@@ -5,7 +5,7 @@ const ManageProducts = () => {
     const [products , setProducts ] = UseProducts();
 
     const deleteProduct = (id) =>{
-      fetch(`https://cryptic-retreat-01074.herokuapp.com/product/${id}`,{
+      fetch(`https://computer-mart2.onrender.com/product/${id}`,{
          method:'DELETE'
       }).then(res => res.json())
       .then(data =>{

@@ -34,7 +34,7 @@ const AddProduct = () => {
           
          
         }
-        fetch('https://cryptic-retreat-01074.herokuapp.com/product' , {
+        fetch('https://computer-mart2.onrender.com/product' , {
             method: 'POST',
             headers:{
                 'content-type':'application/json'

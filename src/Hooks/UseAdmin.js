@@ -9,7 +9,7 @@ const UseAdmin = user =>{
      useEffect( () =>{
          const email = user?.email;
          if(email){
-            fetch(`https://cryptic-retreat-01074.herokuapp.com/admin/${email}`,{
+            fetch(`https://computer-mart2.onrender.com/admin/${email}`,{
                 method:'GET',
                 headers:{
                     'content-type': 'application/json',

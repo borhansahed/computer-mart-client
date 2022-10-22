@@ -21,7 +21,7 @@ const Purchase = () => {
     const [product, setProduct] = useState([]);
 
     useEffect(() => {
-        fetch(`https://cryptic-retreat-01074.herokuapp.com/product/${id}`)
+        fetch(`https://computer-mart2.onrender.com/product/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [product])
@@ -54,7 +54,7 @@ const Purchase = () => {
            
         
        }
-       fetch('https://cryptic-retreat-01074.herokuapp.com/booking' , {
+       fetch('https://computer-mart2.onrender.com/booking' , {
            method: 'POST',
            headers:{
                'content-type':'application/json'

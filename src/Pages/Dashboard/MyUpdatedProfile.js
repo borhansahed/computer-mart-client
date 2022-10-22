@@ -16,7 +16,7 @@ const MyUpdatedProfile = () => {
 
    useEffect(()=>{
     if(user){
-          fetch(`https://cryptic-retreat-01074.herokuapp.com/profile/${user.email}` , {
+          fetch(`https://computer-mart2.onrender.com/profile/${user.email}` , {
                      method: 'GET',
                      headers:{
                          'content-type':'application/json'

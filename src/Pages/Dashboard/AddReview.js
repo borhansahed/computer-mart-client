@@ -24,7 +24,7 @@ const AddReview = () => {
            
           
          }
-         fetch('https://cryptic-retreat-01074.herokuapp.com/review' , {
+         fetch('https://computer-mart2.onrender.com/review' , {
              method: 'POST',
              headers:{
                  'content-type':'application/json'

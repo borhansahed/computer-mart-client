@@ -7,7 +7,7 @@ import UserRow from './UserRow';
 const User = () => {
    
 
-    const {data: users , isLoading , refetch}  =useQuery('users' , () => fetch('https://cryptic-retreat-01074.herokuapp.com/user' , {
+    const {data: users , isLoading , refetch}  =useQuery('users' , () => fetch('https://computer-mart2.onrender.com/user' , {
       method: 'GET',
       headers:{
           authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -20,7 +20,7 @@ const User = () => {
 
     const removeUser = (id) =>{
   
-      const url = `https://cryptic-retreat-01074.herokuapp.com/user/${id}`
+      const url = `https://computer-mart2.onrender.com/user/${id}`
       fetch(url, {
         method: 'DELETE',
       }).then(res => res.json())
