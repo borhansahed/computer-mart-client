@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import auth from '../../Firebase-init';
-import UseProducts from '../../Hooks/UseProducts';
 import '../Css/Products.css'
 import Footer from '../Home/Footer';
-import BookingModal from './BookingModal';
-import BookingProduct from './BookingProduct';
 import {  toast } from 'react-toastify';
 import Loading from '../../Shared/Loading';
 
@@ -68,7 +65,10 @@ const Purchase = () => {
             
        })
        
-       navigate('/home')
+       setTimeout(() => {
+         navigate('/home')
+       }, 1000)
+      
       
     } 
 
@@ -99,7 +99,7 @@ const Purchase = () => {
                                 <label className="label">
                                     <span className="label-text text-base lg:text-xl">Your Name</span>
                                 </label>
-                                <input className="input input-bordered" type="text" value={user.displayName} placeholder="Your name" disabled {...register("your name", { required: true, maxLength: 10 })} />
+                                <input className="input input-bordered" type="text" value={user.displayName} placeholder="Your name" disabled {...register("your name", { required: true, maxLength: 10 })} autoFocus="" />
                             </div>
                            
                             <div className="form-control">

@@ -57,8 +57,8 @@ const ManageAllOrders = () => {
         <div>
          <h4 className=' text-2xl lg:text-3xl mt-3 mb-3 text-yellow-400  ml-16 lg:ml-0'>All Orders </h4>
 
-         <div class="w-screen lg:w-full  overflow-x-auto">
-  <table class="table w-screen lg:w-full">
+         <div className="w-screen lg:w-full  overflow-x-auto">
+  <table className="table w-screen lg:w-full">
     
     <thead>
       <tr>

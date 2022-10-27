@@ -24,6 +24,7 @@ import ManageProducts from './Pages/Dashboard/ManageProducts';
 import Payment from './Pages/Dashboard/Payment';
 import About from './Pages/Home/About';
 import MyUpdatedProfile from './Pages/Dashboard/MyUpdatedProfile';
+import Inventory from './Pages/Inventory/Inventory';
 
 function App() {
   return (
@@ -33,6 +34,10 @@ function App() {
     <Routes>
     <Route path='/' element={ <Home />}></Route>
     <Route path='/home' element={ <Home />}></Route>
+    <Route path='/inventory' element={ <RequireAuth>
+       <Inventory />
+    </RequireAuth>
+   }>  </Route>
    
 
     <Route path='/purchase/:id' element={ <RequireAuth>

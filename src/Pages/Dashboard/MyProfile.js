@@ -69,9 +69,9 @@ const MyProfile = () => {
            
 
             <div>
-            <div class="card lg:card-side bg-base-100 shadow-xl">
+            <div className="card lg:card-side bg-base-100 shadow-xl">
        
-  <div class="card-body">
+  <div className="card-body">
   <form  onSubmit={handleProfile} className=" mx-auto w-60  lg:mx-0 lg:w-2/4">
 
 

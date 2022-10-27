@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useQuery } from 'react-query';
 import { toast } from 'react-toastify';
 import Loading from '../../Shared/Loading';
@@ -38,8 +38,8 @@ const User = () => {
         <div>
             <h3 className=' lg:text-3xl text-2xl mx-20 lg:mx-0 text-yellow-400 mt-4 mb-5'>All Users</h3>
 
-            <div class="overflow-x-auto">
-  <table class="table w-full">
+            <div className="overflow-x-auto">
+  <table className="table w-full">
    
     <thead>
       <tr className='text-xl'>

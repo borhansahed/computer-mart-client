@@ -1,8 +1,5 @@
 import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, Navigate } from 'react-router-dom';
-import UseAdmin from '../../Hooks/UseAdmin';
-import Loading from '../../Shared/Loading';
+import { Link } from 'react-router-dom';
 import '../Css/Products.css'
 
 const Products = ({product}) => {
@@ -10,14 +7,10 @@ const Products = ({product}) => {
 
     const {name , price , description , picture , _id} =product;
 
-    const ProductDetail = () => {
-      const path = `/inventory/${_id}`;
-      Navigate(path);
-    }
     return (
-        <div className='products-container   mb-8'>
-            <div className="card w-72 products-card lg:w-96 bg-base-100 shadow-xl">
-  <figure><img src={picture} alt="Shoes" /></figure>
+        <div className='products-container group  mb-8'>
+            <div className="card w-72  products-card lg:w-96 bg-base-100 shadow-xl">
+  <figure><img className='transition ease-in group-hover:translate-y-44 ' src={picture} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title text-xl lg:text-3xl">{name}</h2>
     <p className='text-base lg:text-xl'>{description?.slice(0,100)} ...<span className='text-yellow-500'>See More</span></p>

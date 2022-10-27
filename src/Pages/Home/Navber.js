@@ -55,7 +55,7 @@ const Navber = () => {
             <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 w-52 shadow bg-base-100 rounded-box ">
            
               <li><Link to='/'>Home</Link></li>
-             
+            {user && <li><Link to='/inventory'>Inventory</Link></li>}
              {user && <li ><Link to='/dashboard'>Dashboard</Link></li>}
              <li ><Link to='/blogs'>Blogs</Link></li>
              <li ><Link to='/about'>About</Link></li>
@@ -67,7 +67,7 @@ const Navber = () => {
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal lg:pr-28 lg:text-xl ">
           <li><Link to='/'>Home</Link></li>
-         
+          {user && <li><Link to='/inventory'>Inventory</Link></li>}
          {user && <li ><Link to='/dashboard'>Dashboard</Link></li>}
         
           <li ><Link to='/blogs'>Blogs</Link></li>
@@ -78,16 +78,16 @@ const Navber = () => {
        {user &&  <div className="dropdown dropdown-end ml-28 lg:ml-0 lg:mr-48">
       <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img src={user.photoURL} />
+          <img src={user.photoURL} alt=''/>
           
         </div>
       </label>
       <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
         <li>
-          <a className="justify-between text-base lg:text-xl">
+          <p className="justify-between text-base lg:text-xl">
            {user.email}
             
-          </a>
+          </p>
         </li>
         
         <button className='btn btn-outline w-14 lg:w-20 ml-2 lg:ml-3 btn-warning  btn-xs lg:btn-sm  text-base' onClick={handleLogout}>SignOut</button>

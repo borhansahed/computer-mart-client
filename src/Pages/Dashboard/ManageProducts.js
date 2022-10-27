@@ -18,8 +18,8 @@ const ManageProducts = () => {
         <div>
             <h2 className='lg:text-3xl text-2xl mx-20 lg:mx-0 text-yellow-400 mt-4 mb-5'> Managed Products</h2>
 
-            <div class="overflow-x-auto">
-  <table class="table  lg:w-full w-72">
+            <div className="overflow-x-auto">
+  <table className="table  lg:w-full w-72">
   
     <thead>
       <tr>
