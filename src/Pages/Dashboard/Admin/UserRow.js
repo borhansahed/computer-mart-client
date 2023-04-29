@@ -1,12 +1,12 @@
 import React from 'react';
 import { toast } from 'react-toastify';
-import Loading from '../../Shared/Loading';
+
 
 const UserRow = ({user , index , refetch, removeUser}) => {
     const {email , role}=user;
 
     const handleAdmin = () =>{
-        fetch(`https://computer-mart2.onrender.com/user/admin/${email}`,{
+        fetch(`https://computer-mart-server.vercel.app/user/admin/${email}`,{
             method:'PUT',
             headers:{
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

@@ -1,11 +1,11 @@
 import React from 'react';
 import { toast } from 'react-toastify';
-import UseProducts from '../../Hooks/UseProducts';
+import UseProducts from '../../../Hooks/UseProducts';
 const ManageProducts = () => {
     const [products , setProducts ] = UseProducts();
 
     const deleteProduct = (id) =>{
-      fetch(`https://computer-mart2.onrender.com/product/${id}`,{
+      fetch(`https://computer-mart-server.vercel.app/product/${id}`,{
          method:'DELETE'
       }).then(res => res.json())
       .then(data =>{

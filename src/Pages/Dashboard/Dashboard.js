@@ -28,7 +28,7 @@ const Dashboard = () => {
                 
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
   <div className="drawer-content ">
-        <h2 className='lg:text-4xl text-2xl  font-medium hidden lg:block'>Welcome To Your <span className=' text-3xl lg:text-5xl text-yellow-500'>Dashboard</span> </h2>
+        {/* <h2 className='lg:text-4xl text-2xl  font-medium hidden lg:block'>Welcome To Your <span className=' text-3xl lg:text-5xl text-yellow-500'>Dashboard</span> </h2> */}
             <Outlet></Outlet>
   
   </div> 
@@ -36,8 +36,10 @@ const Dashboard = () => {
     <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
     <ul className="menu p-4 overflow-y-auto w-40 lg:w-80 bg-base-100 text-base-content text-base lg:text-xl">
      
-      <li><Link to="/dashboard">My Profile</Link></li>
+      <li><Link to="/dashboard">Dashboard</Link></li>
     { admin ? <li><Link to="/dashboard/manageallorders">Manage All Orders</Link></li> : <li><Link to="/dashboard/myorder">My Orders</Link></li>}
+
+    <li><Link to="/dashboard/myprofile">My profile</Link></li>
 
     { admin ? <li><Link to="/dashboard/addproduct">Add a Product</Link></li> : <li><Link to="/dashboard/addreview">Add a Review</Link></li>}
 

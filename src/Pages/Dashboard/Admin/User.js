@@ -1,13 +1,13 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import { toast } from 'react-toastify';
-import Loading from '../../Shared/Loading';
-import UserRow from './UserRow';
+import Loading from '../../../Shared/Loading';
+import UserRow from '../Admin/UserRow';
 
 const User = () => {
    
 
-    const {data: users , isLoading , refetch}  =useQuery('users' , () => fetch('https://computer-mart2.onrender.com/user' , {
+    const {data: users , isLoading , refetch}  =useQuery('users' , () => fetch('https://computer-mart-server.vercel.app/user' , {
       method: 'GET',
       headers:{
           authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -20,7 +20,7 @@ const User = () => {
 
     const removeUser = (id) =>{
   
-      const url = `https://computer-mart2.onrender.com/user/${id}`
+      const url = `https://computer-mart-server.vercel.app/user/${id}`
       fetch(url, {
         method: 'DELETE',
       }).then(res => res.json())

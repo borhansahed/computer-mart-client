@@ -18,7 +18,7 @@ const Purchase = () => {
     const [product, setProduct] = useState([]);
 
     useEffect(() => {
-        fetch(`https://computer-mart2.onrender.com/product/${id}`)
+        fetch(`https://computer-mart-server.vercel.app/product/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [product])
@@ -51,7 +51,7 @@ const Purchase = () => {
            
         
        }
-       fetch('https://computer-mart2.onrender.com/booking' , {
+       fetch('https://computer-mart-server.vercel.app/booking' , {
            method: 'POST',
            headers:{
                'content-type':'application/json'

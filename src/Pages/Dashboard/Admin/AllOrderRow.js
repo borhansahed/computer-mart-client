@@ -1,6 +1,5 @@
 import React from 'react';
-import { useEffect } from 'react';
-import Loading from '../../Shared/Loading';
+import Loading from '../../../Shared/Loading';
 
 const AllOrderRow = ({booking , index , isLoading , deleteOrder, shipment}) => {
 

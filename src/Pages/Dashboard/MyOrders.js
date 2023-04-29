@@ -13,7 +13,7 @@ const MyOrders = () => {
 
     useEffect(()=>{
     if(user){
-        fetch(`https://computer-mart2.onrender.com/booking?customer=${user.email}`
+        fetch(`https://computer-mart-server.vercel.app/booking?customer=${user.email}`
          
         )
         .then(res=>res.json())
@@ -42,7 +42,7 @@ const MyOrders = () => {
     toast.success("Add Your Review Thanks");
   }
   const cancelOrder = (id) => {
-    const url = `https://computer-mart2.onrender.com/bookings/${id}`
+    const url = `https://computer-mart-server.vercel.app/bookings/${id}`
         fetch(url, {
           method: 'DELETE',
         }).then(res => res.json())

@@ -17,14 +17,15 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import MyOrders from './Pages/Dashboard/MyOrders';
-import User from './Pages/Dashboard/User';
-import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
-import AddProduct from './Pages/Dashboard/AddProduct';
-import ManageProducts from './Pages/Dashboard/ManageProducts';
+import User from './Pages/Dashboard/Admin/User';
+import ManageAllOrders from './Pages/Dashboard/Admin/ManageAllOrders';
+import AddProduct from './Pages/Dashboard/Admin/AddProduct';
+import ManageProducts from './Pages/Dashboard/Admin/ManageProducts';
 import Payment from './Pages/Dashboard/Payment';
 import About from './Pages/Home/About';
 import MyUpdatedProfile from './Pages/Dashboard/MyUpdatedProfile';
 import Inventory from './Pages/Inventory/Inventory';
+import AdminDashboard from './Pages/Dashboard/Admin/AdminDashboard';
 
 function App() {
   return (
@@ -51,9 +52,10 @@ function App() {
     </RequireAuth>
   
   }>
-    <Route index element={<MyUpdatedProfile></MyUpdatedProfile>}>
+    <Route index element={<AdminDashboard/>}>
     </Route>
     <Route path="myorder" element={<MyOrders></MyOrders>}></Route>
+    <Route path="myprofile" element={<MyUpdatedProfile></MyUpdatedProfile>}></Route>
     <Route path="addreview" element={<AddReview/>}></Route>
     <Route path="payment/:id" element={<Payment/>}></Route>
     <Route path="users" element={<User/>}></Route>

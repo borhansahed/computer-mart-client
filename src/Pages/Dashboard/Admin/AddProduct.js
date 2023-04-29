@@ -34,7 +34,7 @@ const AddProduct = () => {
           
          
         }
-        fetch('https://computer-mart2.onrender.com/product' , {
+        fetch('https://computer-mart-server.vercel.app/product' , {
             method: 'POST',
             headers:{
                 'content-type':'application/json'

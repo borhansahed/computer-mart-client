@@ -24,7 +24,7 @@ const AddReview = () => {
            
           
          }
-         fetch('https://computer-mart2.onrender.com/review' , {
+         fetch('https://computer-mart-server.vercel.app/review' , {
              method: 'POST',
              headers:{
                  'content-type':'application/json'

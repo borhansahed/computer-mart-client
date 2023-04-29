@@ -2,12 +2,12 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useQuery } from 'react-query';
 import { toast } from 'react-toastify';
-import Loading from '../../Shared/Loading';
+import Loading from '../../../Shared/Loading';
 import AllOrderRow from './AllOrderRow';
 
 const ManageAllOrders = () => {
 
-    const {data: bookings , isLoading , refetch}  =useQuery('users' , () => fetch('https://computer-mart2.onrender.com/bookings' , {
+    const {data: bookings , isLoading , refetch}  =useQuery('users' , () => fetch('https://computer-mart-server.vercel.app/bookings' , {
         method: 'GET',
         headers:{
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -19,7 +19,7 @@ const ManageAllOrders = () => {
       }
 
       const deleteOrder = (id) =>{
-        const url = `https://computer-mart2.onrender.com/bookings/${id}`
+        const url = `https://computer-mart-server.vercel.app/bookings/${id}`
         fetch(url, {
           method: 'DELETE',
         }).then(res => res.json())
@@ -34,7 +34,7 @@ const ManageAllOrders = () => {
 
     const shipment = (id) =>{
     
-      fetch(`https://computer-mart2.onrender.com/bookings/${id}`,{
+      fetch(`https://computer-mart-server.vercel.app/bookings/${id}`,{
           method:'PUT',
           
       }).then(res =>{

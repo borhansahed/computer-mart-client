@@ -16,7 +16,7 @@ const CheckoutForm = ({ booking , isLoading , refetch }) => {
 
   useEffect(() => {
    if(price){
-    fetch('https://computer-mart2.onrender.com/create-payment-intent', {
+    fetch('https://computer-mart-server.vercel.app/create-payment-intent', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ const CheckoutForm = ({ booking , isLoading , refetch }) => {
             booking: _id ,
             transactionId: paymentIntent.id
       }
-      fetch(`https://computer-mart2.onrender.com/booking/${_id}` , {
+      fetch(`https://computer-mart-server.vercel.app/booking/${_id}` , {
         method: 'PUT',
         headers: {
           'content-type': 'application/json',

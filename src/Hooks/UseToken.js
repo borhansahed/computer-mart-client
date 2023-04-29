@@ -10,7 +10,7 @@ const useToken = user =>{
          
          const currentUser = {email: email , password : password};
           if(email){
-              fetch(`https://computer-mart2.onrender.com/user/${email}`,{
+              fetch(`https://computer-mart-server.vercel.app/user/${email}`,{
                   method:'PUT',
                   headers:{
                       'content-type': 'application/json'

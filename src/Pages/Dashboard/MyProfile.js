@@ -43,7 +43,7 @@ const MyProfile = () => {
                   address
                
                  }
-                 fetch(`https://computer-mart2.onrender.com/profile/${user.email}` , {
+                 fetch(`https://computer-mart-server.vercel.app/profile/${user.email}` , {
                      method: 'PUT',
                      headers:{
                          'content-type':'application/json'
